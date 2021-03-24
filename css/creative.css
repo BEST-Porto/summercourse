@@ -342,11 +342,11 @@ header.masthead p {
 
 .btn-primary {
   color:#0f2f4d;
-  background-color: #9ee3da;
-  border-color: #9ee3da;
+  background-color: #A4E425;
   line-height: 0.5rem;
   margin-top: 1rem ;
-  border-radius: 44px;
+  border-radius: 0px;
+  border: 5px solid #000;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
