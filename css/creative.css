@@ -10,10 +10,6 @@ html {
   height: 100%;
 }
 
-body {
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
 hr {
   max-width: 50px;
   border-width: 3px;
@@ -38,21 +34,13 @@ a:hover {
 }
 
 @font-face {
-  font-family: "Gilroy";
-  src: url("../img/2020/webfont/gilroy-bold-webfont.woff") format('woff');
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "Gilroy";
-  src: url("../img/2020/webfont/gilroy-regular-webfont.woff") format('woff');
+  font-family: "Lato";
+  src: url("../img/2020/webfont/lato-v17-latin-regular.woff") format('woff');
   font-weight: default;
 }
 
-@font-face {
-  font-family: "Gilroy";
-  src: url("../img/2020/webfont/gilroy-lightitalic-webfont.woff") format('woff');
-  font-style: italic;
+body {
+  font-family: 'Lato', sans-serif;
 }
 
 h1,
@@ -60,29 +48,33 @@ h2,
 h3,
 h4,
 h5,
-h6{font-family: "Gilroy"};
+h6{font-family: 'Horizon-PersonalUse'};
 
-.bg-blue {
-  background-color: #1a67a8 !important;
-}
+
 .bg-green {
   background-color: #0e770a !important;
-}
-.bg-yellow {
-  background-color: #f0a120 !important;
 }
 .bg-dark {
   background-color: #212529 !important;
 }
-.bg-darkblueVIsc20 {
-  background-color: #0f2f4d !important;
+.bg-persianblueVIsc21 {
+  background-color: #072AC8 !important;
 }
-.bg-lightblueVIsc20 {
-  background-color: #1f7a8c !important;
+.bg-viridiangreenVIsc21 {
+  background-color: #129490 !important;
+}
+.bg-vblackVIsc22 {
+  background-color: #000 !important;
 }
 
 .text-faded {
   color: rgba(255, 255, 255, 0.7);
+}
+.text-green {
+  color: #129490;
+}
+.text-lizard {
+  color: #A4E425;
 }
 
 section {
@@ -123,7 +115,7 @@ img::-moz-selection {
 #mainNav {
   border-bottom: 1px solid rgba(33, 37, 41, 0.1);
   background-color: #fff;
-  font-family: 'Gilroy';
+  font-family: 'Lato';
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -131,7 +123,7 @@ img::-moz-selection {
 #mainNav .navbar-brand {
   font-weight: 700;
   color: #1a67a8;
-  font-family: 'Gilroy';
+  font-family: 'Lato';
 }
 
 #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
@@ -331,8 +323,9 @@ header.masthead p {
 .btn {
   font-weight: 700;
   text-transform: uppercase;
-  border: none;
-  border-radius: 300px;
+  border: 5px solid #000;
+  background-color: #A4E425;
+  border-radius: 0px;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -535,7 +528,10 @@ header.masthead p {
 .team-size{
   max-width: 70vw;
 }
-
+.team-central {
+	float: none;
+	margin: 0 auto;
+}
  /*alinhamento vertical*/
  .vertical-center {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
