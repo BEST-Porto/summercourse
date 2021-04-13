@@ -401,7 +401,10 @@ header.masthead p {
 ul.safetyList {
 	text-align: left;
 }
-
+.boxSafety {
+	border: 3px solid #A4E425;
+	padding: 50px;
+}
 
 /*=============== team ===============*/
 
