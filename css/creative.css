@@ -145,18 +145,18 @@ img::-moz-selection {
 #mainNav .navbar-nav > li.nav-item > a.nav-link.active,
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active {
   color: #16130e !important;
-  background-color: transparent;
+  background-color: #fff;
 }
 
 #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover,
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active:hover {
-  background-color: transparent;
+  background-color: #fff;
 }
 
 @media (min-width: 992px) {
   #mainNav {
     border-color: transparent;
-    background-color: transparent;
+    background-color: #fff;
   }
   #mainNav .navbar-brand {
     color: rgb(255, 255, 255);
@@ -397,6 +397,12 @@ header.masthead p {
   width:100%;
   position:absolute;
   }
+/*========== Segurança ===========*/
+ul.safetyList {
+	text-align: left;
+}
+
+
 /*=============== team ===============*/
 
 .content {
@@ -615,3 +621,4 @@ height: 10px;
   left: 0;
   top: 0;
 }
+
