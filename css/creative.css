@@ -48,7 +48,7 @@ h2,
 h3,
 h4,
 h5,
-h6{font-family: 'Horizon-PersonalUse'};
+h6{font-family: 'Lato'};
 
 
 .bg-green {
@@ -145,21 +145,21 @@ img::-moz-selection {
 #mainNav .navbar-nav > li.nav-item > a.nav-link.active,
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active {
   color: #16130e !important;
-  background-color: transparent;
+  background-color: #fff;
 }
 
 #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover,
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active:hover {
-  background-color: transparent;
+  background-color: #fff;
 }
 
 @media (min-width: 992px) {
   #mainNav {
     border-color: transparent;
-    background-color: transparent;
+    background-color: #fff;
   }
   #mainNav .navbar-brand {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgb(255, 255, 255);
   }
   #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
     color: #0f2f4d;
@@ -198,7 +198,7 @@ img::-moz-selection {
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 56px);
-  background:url(../img/2020/header2_sc20.jpg);
+  background:url(../img/2020/background3.png);
   background-position: center center;
   background-size: cover;
 }
@@ -397,6 +397,12 @@ header.masthead p {
   width:100%;
   position:absolute;
   }
+/*========== Segurança ===========*/
+ul.safetyList {
+	text-align: left;
+}
+
+
 /*=============== team ===============*/
 
 .content {
@@ -615,3 +621,4 @@ height: 10px;
   left: 0;
   top: 0;
 }
+
