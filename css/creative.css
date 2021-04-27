@@ -533,10 +533,10 @@ ul.safetyList {
 }
 
 .team-members:hover .team-desc {
-  -webkit-transform: translate3d(0, -5%, 0);
-  transform: translate3d(0, -5%, 0);
-  -webkit-transform: translate3d(0, -10%, 0);
-  transform: translate3d(0, -10%, 0);
+  -webkit-transform: translate3d(0, -15%, 0);
+  transform: translate3d(0, -15%, 0);
+  -webkit-transform: translate3d(0, -20%, 0);
+  transform: translate3d(0, -30%, 0);
 }
 
 .team-members:hover .team-desc {
@@ -601,6 +601,7 @@ a {
 .carousel-inner .carousel-item-prev {
   display: flex;
   max-height: 20vw;
+  min-height: 18vh;
 
 }
 .carousel-inner .carousel-item.img{
