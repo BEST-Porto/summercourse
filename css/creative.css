@@ -39,6 +39,16 @@ a:hover {
   font-weight: default;
 }
 
+
+@font-face {
+  font-family: 'quantumregular';
+  src: url('../webfontkit/quantum-webfont.woff2') format('woff2'),
+       url('../webfontkit/quantum-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 body {
   font-family: 'Lato', sans-serif;
 }
@@ -48,7 +58,7 @@ h2,
 h3,
 h4,
 h5,
-h6{font-family: 'Lato'};
+h6{font-family: 'quantumregular'};
 
 
 .bg-green {
