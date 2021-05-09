@@ -107,7 +107,7 @@
             <div class='row'>
                 <div class=" mx-auto">
                     <button class="btn btn-primary btn-xl js-scroll-trigger float-sm-left" style="width:12rem"
-                       target="_blank"   title="Applications start on the 15th of may">Apply Now</button>
+                       target="_blank" onclick="showAlert()"   title="Applications start on the 15th of may">Apply Now</button>
                 </div>
             </div>
             <div class="row">
@@ -121,7 +121,11 @@
 
 </header>
 
-
+<script>
+    function showAlert() {
+        alert ("Applications start on the 15th of may");
+      }
+    </script>
 <!-- About best -->
 
 <section class="text-dark vertical-center fill" id="about">
@@ -198,7 +202,7 @@
         </div>
         <div class="row">
             <div class="col-lg-6 text-center" style="padding-bottom:20px">
-               <button class="btn btn-light btn-xl sr-button" target="_blank"
+               <button class="btn btn-light btn-xl sr-button" target="_blank" onclick="showAlert()" 
                     title="Applications start on the 15th of may">Apply here</button>
             </div>
             <div class="col-lg-6 text-center">
