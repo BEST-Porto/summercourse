@@ -610,6 +610,20 @@ a {
   margin-right:-4px;
 }
 
+/*Parceiros*/
+.logo-box{
+	background-color: #fff;
+	border-radius: 100%;
+}
+.logo-box, .logo {
+	width: 100%;
+}
+.spacing-logos {
+	margin-bottom: 2vh;
+}
+.logo:hover {
+  transform: scale(1.05); 
+}
 
 /*carousel*/
 .carousel-inner .carousel-item.active,
@@ -654,4 +668,3 @@ height: 10px;
   left: 0;
   top: 0;
 }
-
