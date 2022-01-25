@@ -50,15 +50,18 @@ a:hover {
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Noto-Sans';
 }
 
-h1,
+h1 {
+  font-family: 'Oxygen'
+}
+
 h2,
 h3,
 h4,
 h5,
-h6{font-family: 'quantumregular'};
+h6{font-family: 'Fira Sans'};
 
 
 .bg-green {
@@ -76,15 +79,18 @@ h6{font-family: 'quantumregular'};
 .bg-vblackVIsc22 {
   background-color: #000 !important;
 }
+.bg-darkyellowVIsc22 {
+  background-color: #E2C044;
+}
 
 .text-faded {
   color: rgba(255, 255, 255, 0.7);
 }
 .text-green {
-  color: #129490;
+  color: #3669b2;
 }
 .text-lizard {
-  color: #A4E425;
+  color: #F8D525;
 }
 
 section {
@@ -223,9 +229,10 @@ img::-moz-selection {
 }
 
 header.masthead {
+  margin-top: 4rem;
   padding-top: 10rem;
   padding-bottom: calc(10rem - 56px);
-  background:url(../img/2020/background3.png);
+  background:url(../img/backgroundsc221.png);
   background-position: center center;
   background-size: cover;
 }
@@ -351,7 +358,7 @@ header.masthead p {
   font-weight: 700;
   text-transform: uppercase;
   border: 5px solid #000;
-  background-color: #129490;
+  background-color: #3669b2;
   color:#fff;
   border-radius: 0px;
   font-family: 'Source Sans Pro', sans-serif;
@@ -368,10 +375,10 @@ header.masthead p {
 }
 
 .btn-primary {
-  color:#fff;
-  background-color: #129490;
+  color: #fff;;
+  background-color: #3669b2;
   line-height: 0.5rem;
-  margin-top: 1rem ;
+  margin-top: 1rem;
   border-radius: 0px;
   border: 5px solid #000;
 }
@@ -431,7 +438,7 @@ ul.safetyList {
 	text-align: left;
 }
 .boxSafety {
-	border: 3px solid #A4E425;
+	border: 3px solid #F8D525;
 	padding: 50px;
 }
 
@@ -464,7 +471,7 @@ ul.safetyList {
   font-size: 40px;
   font-weight: 500;
   margin: 0 0 20px;
-  color: #444;
+  color: rgb(0, 0, 0);
 }
 
 .heading p {
@@ -472,7 +479,7 @@ ul.safetyList {
   font-weight: 300;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  color: #8693a7;
+  color: #25A76A;
 }
 
 /* Team Members */
@@ -570,6 +577,7 @@ ul.safetyList {
 	float: none;
 	margin: 0 auto;
 }
+
  /*alinhamento vertical*/
  .vertical-center {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
