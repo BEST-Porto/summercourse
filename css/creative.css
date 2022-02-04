@@ -54,15 +54,23 @@ body {
 }
 
 h1 {
-  font-family: 'Oxygen'
+  font-family: 'Prompt';
+  font-weight: bold;
 }
 
 h2,
 h3,
 h4,
 h5,
-h6{font-family: 'Fira Sans'};
+h6{
+  font-family: 'Fira Sans Condensed';
+  font-weight: bold;
+}
 
+p,
+li {
+  font-family: 'PT Sans';
+}
 
 .bg-green {
   background-color: #0e770a !important;
@@ -79,8 +87,12 @@ h6{font-family: 'Fira Sans'};
 .bg-vblackVIsc22 {
   background-color: #000 !important;
 }
+.bg-blueVIsc22 {
+  background-color: #41658A;
+}
+
 .bg-darkyellowVIsc22 {
-  background-color: #E2C044;
+  background-color: #e2c044;
 }
 
 .text-faded {
@@ -99,6 +111,10 @@ section {
 
 .section-heading {
   margin-top: 0;
+}
+
+.best-section {
+  font-size: 300%;
 }
 
 ::-moz-selection {
@@ -358,7 +374,7 @@ header.masthead p {
   font-weight: 700;
   text-transform: uppercase;
   border: 5px solid #000;
-  background-color: #3669b2;
+  background-color: #e2c044;
   color:#fff;
   border-radius: 0px;
   font-family: 'Source Sans Pro', sans-serif;
@@ -370,8 +386,8 @@ header.masthead p {
 
 .btn:hover, .btn:focus, .btn:active, .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   color:#fff;
-  background-color: #129094 !important;	
-  border-color: #072AC8;
+  background-color: #A0CCDA !important;	
+  border-color: #3669b2;
 }
 
 .btn-primary {
@@ -438,7 +454,7 @@ ul.safetyList {
 	text-align: left;
 }
 .boxSafety {
-	border: 3px solid #F8D525;
+	border: 3px solid #000;
 	padding: 50px;
 }
 
@@ -475,6 +491,7 @@ ul.safetyList {
 }
 
 .heading p {
+  font-family: 'Source Sans Pro';
   font-size: 16px;
   font-weight: 300;
   letter-spacing: 0.5px;
