@@ -107,6 +107,7 @@ li {
 
 section {
   padding: 4rem 0;
+  max-width: 1700px;
 }
 
 .section-heading {
@@ -244,6 +245,17 @@ img::-moz-selection {
 	height: 7%;
 }
 
+@media (max-width: 500px){
+  header.masthead {
+    margin-top: 4rem;
+    padding-top: 10rem;
+    padding-bottom: calc(10rem - 56px);
+    background:url(../img/backgroundsc222.png);
+    background-position: center center;
+    background-size: cover;
+  }
+}
+
 header.masthead {
   margin-top: 4rem;
   padding-top: 10rem;
@@ -378,6 +390,10 @@ header.masthead p {
   color:#fff;
   border-radius: 0px;
   font-family: 'Source Sans Pro', sans-serif;
+}
+
+.btn-blue {
+  background-color: #3669b2;
 }
 
 .btn-xl {
