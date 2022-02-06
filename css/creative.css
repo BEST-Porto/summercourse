@@ -72,6 +72,10 @@ li {
   font-family: 'PT Sans';
 }
 
+.font-footer{
+  font-family: 'PT Sans'
+}
+
 .bg-green {
   background-color: #0e770a !important;
 }
