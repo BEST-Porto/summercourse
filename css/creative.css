@@ -635,6 +635,8 @@ html, body {
 }
 .fill { 
   min-height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*background box*/
@@ -712,4 +714,10 @@ height: 10px;
   height: 100%;
   left: 0;
   top: 0;
+}
+
+section#contact{
+  width: 100vw;
+  margin-left: auto;
+  margin-right: auto;
 }
