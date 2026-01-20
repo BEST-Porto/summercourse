@@ -721,3 +721,126 @@ section#contact{
   margin-left: auto;
   margin-right: auto;
 }
+
+/* =====================================
+   About BEST Porto Section - Custom
+   Fonts:
+   - Title: Open Sauce (uppercase + bold)
+   - Body: Inter
+===================================== */
+
+.best-porto-section {
+  background: #011136; /* azul escuro do layout */
+  padding: 80px 0;
+  width: 100%;
+}
+
+.best-porto-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr; /* texto maior que imagens */
+  gap: 60px;
+  align-items: center;
+}
+
+/* ---------- Texto ---------- */
+
+.best-porto-title {
+  font-family: 'Open Sauce One', sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 25px;
+}
+
+.best-porto-text p {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #e6eef7;
+  margin-bottom: 18px;
+  max-width: 520px;
+}
+
+/* ---------- Botão ---------- */
+
+.best-porto-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 36px;
+
+  background: #DDFF00;
+  color: #000;
+  border-radius: 30px;
+
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-decoration: none;
+
+  transition: all 0.25s ease;
+}
+
+.best-porto-btn:hover {
+  background: #eeff4a;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* ---------- Imagens ---------- */
+
+.best-porto-images {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.best-img {
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+}
+
+/* tamanhos ligeiramente diferentes como na imagem */
+
+.top-img {
+  height: 230px;
+}
+
+.bottom-img {
+  height: 260px;
+}
+
+/* ---------- Responsivo ---------- */
+
+@media (max-width: 900px) {
+
+  .best-porto-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .best-porto-images {
+    order: -1;
+  }
+
+  .best-porto-title {
+    text-align: center;
+  }
+
+  .best-porto-text {
+    text-align: center;
+  }
+
+  .best-porto-text p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
