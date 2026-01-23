@@ -723,10 +723,7 @@ section#contact{
 }
 
 /* =====================================
-   About BEST Porto Section - Custom
-   Fonts:
-   - Title: Open Sauce (uppercase + bold)
-   - Body: Inter
+   About BEST Porto Section Stylinng
 ===================================== */
 
 .best-porto-section {
@@ -750,18 +747,19 @@ section#contact{
 
 .best-porto-title {
   font-family: 'Open Sauce One', sans-serif;
-  font-size: 42px;
-  font-weight: 800;
-  text-transform: uppercase;
+  font-size: 26px;           
+  font-weight: 700;             /* negrito */
+  text-transform: none;     
   color: #ffffff;
-  margin-bottom: 25px;
+  margin-bottom: 22px;
 }
+
 
 .best-porto-text p {
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   line-height: 1.7;
-  color: #e6eef7;
+  color: #FFFFFF;
   margin-bottom: 18px;
   max-width: 520px;
 }
@@ -771,6 +769,7 @@ section#contact{
 .best-porto-btn {
   display: inline-block;
   margin-top: 25px;
+  margin-left: auto;        /* alinhado à direita */
   padding: 14px 36px;
 
   background: #DDFF00;
@@ -786,8 +785,9 @@ section#contact{
   transition: all 0.25s ease;
 }
 
+
 .best-porto-btn:hover {
-  background: #eeff4a;
+  background: #DDFF00;
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
@@ -806,9 +806,6 @@ section#contact{
   object-fit: cover;
   box-shadow: 0 12px 30px rgba(0,0,0,0.45);
 }
-
-/* tamanhos ligeiramente diferentes como na imagem */
-
 .top-img {
   height: 230px;
 }
@@ -817,7 +814,7 @@ section#contact{
   height: 260px;
 }
 
-/* ---------- Responsivo ---------- */
+/* ---------- para largura igual ou inferior a 900 px ---------- */
 
 @media (max-width: 900px) {
 
@@ -843,4 +840,3 @@ section#contact{
     margin-right: auto;
   }
 }
-
