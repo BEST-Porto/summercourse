@@ -637,8 +637,8 @@ html, body {
 }
 
 /*background box*/
-.transparent-box{
-  background-color:rgba(30, 30, 30, 0.8); 
+.transparent-box{ 
+  background-color:rgba(0, 11, 41, 0.8); 
   color:white;
   padding: 10px;
 }
