@@ -721,3 +721,46 @@ section#contact{
   margin-left: auto;
   margin-right: auto;
 }
+
+/* ================= FAQ Section Styles ================= */
+.bg-faq {
+  position: relative;
+  background: #011136; /* azul escuro */
+  overflow: hidden;
+}
+.bg-faq:before,
+.bg-faq:after {
+  content: none; /* remove decorative patterns for plain background */
+}
+
+.faq-container {
+  max-width: 1100px;
+}
+.faq-title {
+  text-align: center;
+  color: #ff047d; /* rosa */
+  margin-bottom: 24px;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 25px;
+}
+.faq-content {
+  color: #ffffff; /* white body text */
+  text-align: center; /* center FAQ text */
+}
+.faq-question {
+  color: #ff047d; /* rosa for questions */
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 17px; /* subtitle size */
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+.faq-answer {
+  color: #ffffff; /* white for answers */
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .faq-container { padding: 0 8px; }
+}
+
