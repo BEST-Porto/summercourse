@@ -89,7 +89,7 @@ li {
   background-color: #000 !important;
 }
 .bg-blueVIsc22 {
-  background-color: #41658A;
+  background-color: #000b29;
 }
 
 .bg-darkyellowVIsc22 {
@@ -168,7 +168,7 @@ img::-moz-selection {
 
 #mainNav .navbar-brand {
   font-weight: 700;
-  color: #1a67a8;
+  color: #004e74;
   font-family: 'Lato';
 }
 
@@ -434,7 +434,7 @@ header.masthead p {
   transition: all .3s ease;
 }
 .footer a:hover {
-  color:  #1a67a8;
+  color:  #011136;
 }
 .footer-copyright {
   background: rgb(24, 24, 24);
@@ -1100,7 +1100,7 @@ body {
 /* ================= FAQ Section Styles ================= */
 .bg-faq {
   position: relative;
-  background: #011136; /* azul escuro */
+  background: #000b29; /* azul escuro */
   overflow: hidden;
 }
 .bg-faq:before,
