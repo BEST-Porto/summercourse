@@ -40,89 +40,109 @@
 
 </head>
 
+
+<!--Header, onde tem o about us, best,etc-->
 <body id="page-top">
 
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div class="container">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">    
+    <div class="container-fluid px-0">
+        
+        <img src="img/brain-left.png" alt="" style="height: 60px; width: auto;" class="d-none d-lg-block">
 
-        <a class="navbar-brand js-scroll-trigger" 
-        style="margin-left:5rem" href="http://bestporto.org/" 
-        target="_blank">
-            <img src="img/2020/logobest2.png" width="88%">
-        </a>
-        <a class="navbar-brand js-scroll-trigger" 
-        style="margin-left:3rem" href="https://best.eu.org/courses/welcome.jsp" 
-        target="_blank">
-            <img src="img/logobestcourse.png" width="100%">
+        <a class="navbar-brand ml-3" href="https://bestporto.org" target="_blank" rel="noopener">
+        <img src="img/2020/logobest2.png" alt="BEST Porto" style="height: 40px;">
         </a>
 
-		<!-- multilingual-->
-		
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        <button class="navbar-toggler navbar-toggler-right mr-3" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#page-top">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#about_course">About the course</a>
-                </li>
-				<li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#moreInfo">Application</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#location">Location</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#schedule_survival">Schedule/Survival Guide</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#core_team">Core Team</a>
-                </li>
-				<!--<li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#parceiros">Partners</a>
-                </li>-->
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#contact">Contact Us</a>
-                </li>
-            </ul>
-            
+            <ul class="navbar-nav ml-auto text-uppercase">
+  <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#home">Home</a></li>
+  <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About us</a></li>
+
+  <li class="nav-item">
+    <a class="nav-link js-scroll-trigger" href="#about_course">BEST Symposium on Education</a>
+    </a>
+  </li>
+
+  <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#faqs">FAQs</a></li>
+  <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact us</a></li>
+</ul>
         </div>
+
+        <img src="img/brain-right.png" alt="" style="height: 60px; width: auto;" class="d-none d-lg-block ml-3">
+        
     </div>
 </nav>
-<div class="spacing">.</div>
-<header class="masthead text-center text-white d-flex">
-    <div class="container my-auto ">
 
-        <div class="row d-none d-lg-block" style="margin-top:10rem">
-            <div class="col-lg-10 mx-auto">
-                <h1 class="-uppercase">
-                    <strong style="margin-top:10px; color:#0f2f4d;" ;></strong>
-                </h1>
-                <h2 class="-uppercase" style=" color:#0f2f4d;margin-top:10px;">
-                    <i></i>
-                </h2>
 
-            </div>
+
+<!--SLIDE 1, SEM A PARTE DE CIMA DO HOME,ABOUT,ETC-->
+
+
+<header id="home" class="masthead d-flex slide1">
+  <div class="container my-auto">
+    <div class="row align-items-center">
+
+      <div class="col-lg-6 text-left slide1-left">
+        <h1 class="font-weight-bold slide1-title">
+          This is Your<br>
+          Copilot<br>
+          Speaking:
+        </h1>
+
+        <p class="h3 mb-4 slide1-subtitle">
+          Welcome to the AI-Powered<br>
+          Future of Education
+        </p>
+
+        <p class="h4 mb-5 slide1-date">19-28 JULY</p>
+
+        <a class="btn slide1-btn js-scroll-trigger" href="#moreInfo">APPLY NOW!</a>
+      </div>
+
+      <div class="col-lg-6 mt-5 mt-lg-0 slide1-right">
+        <div class="slide1-video">
+          <span class="slide1-video-label">TRAILER</span>
+
+         
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/9N2DUj-QOCo"
+            title="Trailer"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+        
         </div>
-        <br>
-        <br>
-        <div class="mb-1">
-            <div class="row">
-                <div class=" mx-auto">
-                    <a class="btn btn-primary btn-xl js-scroll-trigger float-sm-right" style="width:12rem;"
-                       href="#about_course">Find out more</a>
-                </div>
-            </div>
-        </div>
+      </div>
+
     </div>
+  </div>
 
+  <!-- ondas rosa em baixo à direita -->
+  <svg class="slide1-waves" viewBox="0 0 900 350" aria-hidden="true">
+    <g fill="none" stroke="#ff2aa6" stroke-width="3">
+      <path d="M900 320c-90-70-170-90-260-90-120 0-190 60-300 60-110 0-170-40-260-110"/>
+      <path d="M900 305c-90-70-170-90-260-90-120 0-190 60-300 60-110 0-170-40-260-110"/>
+      <path d="M900 290c-90-70-170-90-260-90-120 0-190 60-300 60-110 0-170-40-260-110"/>
+      <path d="M900 275c-90-70-170-90-260-90-120 0-190 60-300 60-110 0-170-40-260-110"/>
+      <path d="M900 260c-90-70-170-90-260-90-120 0-190 60-300 60-110 0-170-40-260-110"/>
+      <path d="M900 245c-90-70-170-90-260-90-120 0-190 60-300 60-110 0-170-40-260-110"/>
+      <path d="M900 230c-90-70-170-90-260-90-120 0-190 60-300 60-110 0-170-40-260-110"/>
+      <path d="M900 215c-90-70-170-90-260-90-120 0-190 60-300 60-110 0-170-40-260-110"/>
+      <path d="M900 200c-90-70-170-90-260-90-120 0-190 60-300 60-110 0-170-40-260-110"/>
+      <path d="M900 185c-90-70-170-90-260-90-120 0-190 60-300 60-110 0-170-40-260-110"/>
+      <path d="M900 170c-90-70-170-90-260-90-120 0-190 60-300 60-110 0-170-40-260-110"/>
+    </g>
+  </svg>
 </header>
+
+
+
 
 
 
@@ -496,7 +516,7 @@
     </div>
 </section>
 
-</body>
+
 
 <footer>
     <div class="footer">
