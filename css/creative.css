@@ -214,7 +214,9 @@ img::-moz-selection {
     color: #0f2f4d;
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link {
-    padding: 0.5rem 1rem;
+    padding: 1.5rem 1.5rem; 
+    font-size: 1rem;
+
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link,
   #mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
@@ -721,3 +723,165 @@ section#contact{
   margin-left: auto;
   margin-right: auto;
 }
+
+/* ===== SLIDE 1  ===== */
+header.masthead.slide1{
+  position: relative;
+  overflow: hidden;
+
+  margin-top: 0 !important;
+  min-height: 100vh !important;
+  height: 100vh !important;
+
+  background: #011136 !important;
+  background-image: none !important;
+
+  /* espaço para a navbar */
+  padding-top: 110px !important;
+  padding-bottom: 0 !important;
+}
+
+/* texto */
+.slide1-title{
+  color: #68fff7;
+  font-family: 'Prompt', sans-serif;
+  font-weight: 800;
+  font-size: clamp(4.4rem, 5.2vw, 6.2rem) !important;
+  line-height: 1.03;
+}
+
+.slide1-subtitle{
+  color: #68fff7;
+  font-family: 'Prompt', sans-serif;
+  font-size: clamp(1.6rem, 2.0vw, 2.6rem) !important;
+  line-height: 1.25;
+}
+
+.slide1-date{
+  color: #ccff00;
+  font-family: 'Prompt', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.2rem, 1.6vw, 2.0rem) !important;
+}
+
+/* botão */
+.slide1-btn{
+  display: inline-block;
+  background: #68fff7 !important;
+  color: #011136 !important;
+  border: none !important;
+  border-radius: 999px !important;
+  font-family: 'Prompt', sans-serif;
+  font-weight: 800;
+  font-size: 1rem !important;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 22px 56px !important;
+  text-decoration: none;
+}
+
+/* caixa do trailer */
+.slide1-video{
+  position: relative;
+  width: 100%;
+  max-width: 640px !important;
+  height: 320px !important;
+  margin-left: auto;
+  background: #efeeda;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide1-video-label{
+  font-family: 'Prompt', sans-serif;
+  font-weight: 800;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  color: #111;
+}
+
+.slide1-video iframe{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ondas rosa */
+.slide1-waves{
+  position: absolute;
+  width: 620px !important;
+  right: -30px !important;
+  bottom: -70px !important;
+  height: auto;
+  opacity: 0.95;
+  pointer-events: none;
+}
+
+/* responsivo */
+@media (max-width: 992px){
+  .slide1-title{ font-size: 3.2rem; }
+  .slide1-subtitle{ font-size: 1.4rem; }
+  .slide1-date{ font-size: 1.4rem; }
+  .slide1-video{ max-width: 100%; height: 220px; margin: 2rem auto 0; }
+  .slide1-waves{ width: 430px; right: -80px; bottom: -80px; }
+}
+
+/* ===== NAVBAR===== */
+#mainNav{
+  background: #004e74 !important;          /* azul médio */
+  border: none !important;
+  padding: 14px 0 !important;
+}
+
+#mainNav .container-fluid{
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+}
+
+/* links */
+#mainNav .navbar-nav{
+  align-items: center;
+  gap: 26px;                               /* espaçamento entre items */
+}
+
+#mainNav .navbar-nav .nav-link{
+  color: #ffffff !important;               
+  font-family: 'Prompt', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  letter-spacing: 0.02em;
+  padding: 10px 18px !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+}
+
+/* hover */
+#mainNav .navbar-nav .nav-link:hover{
+  color: #68fff7 !important;
+}
+
+/* item “ativo” com retângulo  */
+#mainNav .navbar-nav .nav-link.active{
+  color: #ffffff !important;
+  background: rgba(1, 17, 54, 0.35) !important;   /* azul escuro com transparência */
+  border: 2px solid rgba(104, 255, 247, 0.25) !important;
+}
+
+/* evita o creative.js mudar para branco no shrink */
+#mainNav.navbar-shrink{
+  background: #004e74 !important;
+  border: none !important;
+}
+#mainNav.navbar-shrink .navbar-nav .nav-link{
+  color: #ffffff !important;
+}
+
+/* Logo BEST Porto em branco (a partir do PNG azul) */
+#mainNav .navbar-brand img{
+  filter: brightness(0) invert(1);
+}
+
