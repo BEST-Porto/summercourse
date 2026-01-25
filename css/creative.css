@@ -1517,3 +1517,35 @@ header.masthead.slide1{
   font-size: 1.2rem;
   line-height: 1.2rem;
 }
+
+
+/*Contacts section 
+/* Pink circular container for the icons */
+.icon-circle-pink {
+  display: inline-flex;       /* Necessary to center the icon perfectly */
+  align-items: center;
+  justify-content: center;
+  
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;         /* Turns the square into a perfect circle */
+  
+  background-color: #ff007f;  /* Pink color */
+  
+  /* The icon color matches the section background (#000b29) */
+  color: #000b29; 
+  
+  font-size: 0.9rem;          /* Adjusts the size of the envelope icon inside */
+  margin-top: 10px;
+}
+
+/* Styling for the contact names */
+.contact-name {
+  font-size: 1.1rem;
+}
+
+/* Overrides for links */
+#contact a {
+  text-decoration: none;      
+  color: white;               
+}
