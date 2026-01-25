@@ -351,7 +351,7 @@ header.masthead p {
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
   padding: 0 15px;
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
@@ -730,7 +730,7 @@ header.masthead.slide1{
   min-height: 100vh !important;
   height: 100vh !important;
 
-  background: #004e74 !important;
+  background: #000b29 !important;
   background-image: none !important;
 
   /* espaço para a navbar */
@@ -741,7 +741,7 @@ header.masthead.slide1{
 /* texto */
 .slide1-title{
   color: #40e0d0;
-  font-family: 'Prompt', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 800;
   font-size: clamp(4.4rem, 5.2vw, 6.2rem) !important;
   line-height: 1.03;
@@ -750,7 +750,7 @@ header.masthead.slide1{
 
 .slide1-subtitle{
   color: #40e0d0;
-  font-family: 'Prompt', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: clamp(1.6rem, 2.0vw, 2.6rem) !important;
   line-height: 1.25;
   margin-left: 100px;
@@ -758,18 +758,17 @@ header.masthead.slide1{
 
 .slide1-date{
   color: #91ff01;
-  font-family: 'Prompt', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   font-size: clamp(1.2rem, 1.6vw, 2.0rem) !important;
   margin-left: 100px;
-
 }
 
 /* botão */
 .slide1-btn{
-  margin-left: 100px;
+  margin-left:100px;
   display: inline-block;
-  background: #40e0d0 !important;
+  background: #68fff7 !important;
   color: #011136 !important;
   border: none !important;
   border-radius: 999px !important;
@@ -778,29 +777,24 @@ header.masthead.slide1{
   font-size: 1rem !important;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  padding: 34px 56px !important;
+  padding: 22px 56px !important;
   text-decoration: none;
 }
 
-
 /* caixa do trailer */
-.slide1-video{
+.slide1-video {
   position: relative;
   width: 100%;
   max-width: 640px !important;
   height: 320px !important;
-  margin-left: auto;
-  background: #efeeda;
+  display: block;      
+  margin-right: 100px !important; 
+  background: #004e74;
   border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 100px;
-
 }
 
 .slide1-video-label{
-  font-family: 'Prompt', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 800;
   font-size: 0.75rem;
   letter-spacing: 0.16em;
@@ -815,16 +809,6 @@ header.masthead.slide1{
   border: 0;
 }
 
-/* ondas rosa */
-.slide1-waves{
-  position: absolute;
-  width: 620px !important;
-  right: -30px !important;
-  bottom: -70px !important;
-  height: auto;
-  opacity: 0.95;
-  pointer-events: none;
-}
 
 /* responsivo */
 @media (max-width: 992px){
@@ -837,7 +821,7 @@ header.masthead.slide1{
 
 /* ===== NAVBAR===== */
 #mainNav{
-  background: #004e74 !important;          /* azul médio */
+  background: #004e74 !important;          
   border: none !important;
   padding: 14px 0 !important;
 }
@@ -855,7 +839,7 @@ header.masthead.slide1{
 
 #mainNav .navbar-nav .nav-link{
   color: #ffffff !important;               
-  font-family: 'Prompt', sans-serif !important;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 700 !important;
   font-size: 0.95rem !important;
   letter-spacing: 0.02em;
@@ -891,50 +875,6 @@ header.masthead.slide1{
 }
 
 
-/* ================= FAQ Section Styles ================= */
-.bg-faq {
-  position: relative;
-  background: #011136; /* azul escuro */
-  overflow: hidden;
-}
-.bg-faq:before,
-.bg-faq:after {
-  content: none; /* remove decorative patterns for plain background */
-}
-
-.faq-container {
-  max-width: 1100px;
-}
-.faq-title {
-  text-align: center;
-  color: #ff047d; /* rosa */
-  margin-bottom: 24px;
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 25px;
-}
-.faq-content {
-  color: #ffffff; /* white body text */
-  text-align: center; /* center FAQ text */
-}
-.faq-question {
-  color: #ff047d; /* rosa for questions */
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 17px; /* subtitle size */
-  margin-top: 16px;
-  margin-bottom: 8px;
-}
-.faq-answer {
-  color: #ffffff; /* white for answers */
-  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  font-size: 16px;
-}
-
-@media (max-width: 768px) {
-  .faq-container { padding: 0 8px; }
-}
-
-
-
 /* =====================================
    About BEST Porto Section Stylinng
 ===================================== */
@@ -946,11 +886,8 @@ header.masthead.slide1{
 
 .best-porto-container {
   max-width: 1300px;
-  margin: 0 auto;
-  padding: 0 40px;
-
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr; /* texto maior que imagens */
+  grid-template-columns: 1.1fr 0.9fr; 
   gap: 60px;
   align-items: center;
 }
@@ -958,8 +895,9 @@ header.masthead.slide1{
 /* ---------- Texto ---------- */
 
 .best-porto-title {
-  font-family: 'Open Sauce One', sans-serif;
-  font-size: 26px;         
+  margin-left: 100px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: clamp(1.6rem, 2.0vw, 2.6rem) !important;
   font-weight: 700;             /* negrito */
   text-transform: none;     
   color: #ffffff;
@@ -968,6 +906,7 @@ header.masthead.slide1{
 
 
 .best-porto-text p {
+  margin-left: 100px;
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   line-height: 1.7;
@@ -976,37 +915,27 @@ header.masthead.slide1{
   max-width: 520px;
 }
 
-/* ---------- Botão ---------- */
-
-.best-porto-btn {
+.btn-custom-best {
   display: inline-block;
+  margin-left: 100px !important; /* Força o alinhamento */
   margin-top: 25px;
-  margin-left: auto;        /* alinhado à direita */
-  padding: 14px 36px;
-
-  background: #DDFF00;
-  color: #000;
-  border-radius: 30px;
-
-  font-family: 'Inter', sans-serif;
-  font-weight: 700;
+  padding: 14px 36px !important;
+  background: #d4ff00 !important;
+  color: #000 !important;
+  border-radius: 30px !important;
+  border: none !important; 
+  text-transform: none !important; /* Remove o uppercase do Bootstrap */
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 800;
   font-size: 14px;
-  letter-spacing: 1px;
   text-decoration: none;
-
   transition: all 0.25s ease;
 }
 
 
-.best-porto-btn:hover {
-  background: #DDFF00;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-}
-
 /* ---------- Imagens ---------- */
-
 .best-porto-images {
+  margin-right:20px;
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -1021,12 +950,9 @@ header.masthead.slide1{
 .top-img {
   height: 230px;
 }
-
 .bottom-img {
   height: 260px;
 }
-
-/* ---------- para largura igual ou inferior a 900 px ---------- */
 
 @media (max-width: 900px) {
 
@@ -1054,29 +980,13 @@ header.masthead.slide1{
 }
 
 /* About Course Section */
-.btn-learn-more {
-    background-color: #E2FF00 !important;
-    border: none !important;
-    color: #000 !important;
-    border-radius: 50px;
-    padding: 12px 40px;
-    font-weight: 700;
-    margin-top: 30px;
-    display: inline-block;
-}
-
-.btn-learn-more:hover {
-    background-color: #D4E600 !important;
-    transform: scale(1.05);
-}
-
 .course-images {
+  margin-right:20px;
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-
 .course-images img {
     width: 500px;
     height: 300px;
@@ -1084,15 +994,6 @@ header.masthead.slide1{
     object-fit: cover;
 }
 
-.decorative-wave {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 200px;
-    height: 200px;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path d="M10,50 Q30,30 50,50 T90,50 T130,50 T170,50" stroke="%23FF1493" stroke-width="3" fill="none"/><path d="M10,80 Q30,60 50,80 T90,80 T130,80 T170,80" stroke="%23FF1493" stroke-width="3" fill="none"/><path d="M10,110 Q30,90 50,110 T90,110 T130,110 T170,110" stroke="%23FF1493" stroke-width="3" fill="none"/></svg>');
-    pointer-events: none;
-}
 /* About Course Section Styling */
 #about_course {
     position: relative;
@@ -1123,7 +1024,7 @@ header.masthead.slide1{
 }
 
 #about_course p {
-    font-size: 1.1rem;
+    font-size: 16px;
     line-height: 1.8;
     margin-bottom: 30px;
 }
@@ -1137,13 +1038,13 @@ header.masthead.slide1{
 body {
     background-color: #000b29;
     color: #ffffff;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open sans', sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
 }
 
-/* --- Symposium-about --- */
 
+/* --- Symposium-about --- */
 .container {
     padding: 80px 0;
     max-width: 100%;
@@ -1179,20 +1080,22 @@ body {
 .yellow-line { background-color: #d4ff00; }
 
 .title-right {
-    font-size: 2.2rem;
+    font-size: clamp(1.6rem, 2.0vw, 2.6rem) !important;
+    font-family: 'Open sans', sans-serif;
     font-weight: 700;
     padding-right: 5%;
     text-align: right;
 }
 
-.yellow-text { 
-    color: #d4ff00; 
-    font-size: 1.2rem; 
+.yellow-text {
+  color: #d4ff00;
+  font-size: clamp(1.6rem, 2.0vw, 2.6rem) !important;
+ 
 }
 
 /* --- ALINHAMENTO DO TEXTO --- */
-
 .content-left {
+    font-family: 'Inter', sans-serif;
     max-width: 800px;
     margin-left: 5%; 
     text-align: left;
@@ -1207,6 +1110,7 @@ body {
 
 /* Novo estilo para centralizar o texto turquesa */
 .text-center {
+    font-family: 'Inter', sans-serif;
     width: 100%;
     text-align: center;
     margin: 40px 0;
@@ -1218,7 +1122,8 @@ body {
     margin-bottom: 20px;
 }
 
-.cyan-text { 
+.cyan-text {
+    font-family: 'Inter', sans-serif;
     color: #40e0d0; 
 }
 
@@ -1231,6 +1136,7 @@ body {
 }
 
 #symposium .btn-symposium {
+    font-family: 'Inter', sans-serif;
     background-color: #40e0d0;
     color: #000b29;
     text-decoration: none;
@@ -1247,19 +1153,6 @@ body {
     box-shadow: 0 0 20px rgba(64, 224, 208, 0.4);
 }
 
-/* --- DECORAÇÃO --- */
-.side-waves {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    width: 300px;
-    height: 400px;
-    background: url('waves.png') no-repeat bottom right;
-    background-size: contain;
-    z-index: -1;
-    opacity: 0.6;
-    pointer-events: none;
-}
 
 /* Mobile */
 @media (max-width: 700px) {
@@ -1272,7 +1165,7 @@ body {
 /* ================= FAQ Section Styles ================= */
 .bg-faq {
   position: relative;
-  background: #000b29; /* azul escuro */
+  background: #011136; /* azul escuro */
   overflow: hidden;
 }
 .bg-faq:before,
@@ -1287,8 +1180,8 @@ body {
   text-align: center;
   color: #ff047d; /* rosa */
   margin-bottom: 24px;
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 25px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: clamp(1.6rem, 2.0vw, 2.6rem) !important;
 }
 .faq-content {
   color: #ffffff; /* white body text */
@@ -1296,169 +1189,19 @@ body {
 }
 .faq-question {
   color: #ff047d; /* rosa for questions */
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 17px; /* subtitle size */
   margin-top: 16px;
   margin-bottom: 8px;
 }
 .faq-answer {
   color: #ffffff; /* white for answers */
-  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 16px;
 }
 
 @media (max-width: 768px) {
   .faq-container { padding: 0 8px; }
-}
-
-/* ===== SLIDE 1  ===== */
-header.masthead.slide1{
-  position: relative;
-  overflow: hidden;
-
-  margin-top: 0 !important;
-  min-height: 100vh !important;
-  height: 100vh !important;
-
-  background: #000b29 !important;
-  background-image: none !important;
-
-  /* espaço para a navbar */
-  padding-top: 110px !important;
-  padding-bottom: 0 !important;
-}
-
-/* texto */
-.slide1-title{
-  color: #68fff7;
-  font-family: 'Prompt', sans-serif;
-  font-weight: 800;
-  font-size: clamp(4.4rem, 5.2vw, 6.2rem) !important;
-  line-height: 1.03;
-}
-
-.slide1-subtitle{
-  color: #68fff7;
-  font-family: 'Prompt', sans-serif;
-  font-size: clamp(1.6rem, 2.0vw, 2.6rem) !important;
-  line-height: 1.25;
-}
-
-.slide1-date{
-  color: #ccff00;
-  font-family: 'Prompt', sans-serif;
-  font-weight: 700;
-  font-size: clamp(1.2rem, 1.6vw, 2.0rem) !important;
-}
-
-/* botão */
-.slide1-btn{
-  display: inline-block;
-  background: #68fff7 !important;
-  color: #011136 !important;
-  border: none !important;
-  border-radius: 999px !important;
-  font-family: 'Prompt', sans-serif;
-  font-weight: 800;
-  font-size: 1rem !important;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  padding: 22px 56px !important;
-  text-decoration: none;
-}
-
-/* caixa do trailer */
-.slide1-video{
-  position: relative;
-  width: 100%;
-  max-width: 640px !important;
-  height: 320px !important;
-  margin-left: auto;
-  background: #efeeda;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.slide1-video-label{
-  font-family: 'Prompt', sans-serif;
-  font-weight: 800;
-  font-size: 0.75rem;
-  letter-spacing: 0.16em;
-  color: #111;
-}
-
-.slide1-video iframe{
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-/* responsivo */
-@media (max-width: 992px){
-  .slide1-title{ font-size: 3.2rem; }
-  .slide1-subtitle{ font-size: 1.4rem; }
-  .slide1-date{ font-size: 1.4rem; }
-  .slide1-video{ max-width: 100%; height: 220px; margin: 2rem auto 0; }
-  .slide1-waves{ width: 430px; right: -80px; bottom: -80px; }
-}
-
-/* ===== NAVBAR===== */
-#mainNav{
-  background: #004e74 !important;          /* azul médio */
-  border: none !important;
-  padding: 14px 0 !important;
-}
-
-#mainNav .container-fluid{
-  padding-left: 18px !important;
-  padding-right: 18px !important;
-}
-
-/* links */
-#mainNav .navbar-nav{
-  align-items: center;
-  gap: 26px;                               /* espaçamento entre items */
-}
-
-#mainNav .navbar-nav .nav-link{
-  color: #ffffff !important;               
-  font-family: 'Prompt', sans-serif !important;
-  font-weight: 700 !important;
-  font-size: 0.95rem !important;
-  letter-spacing: 0.02em;
-  padding: 10px 18px !important;
-  background: transparent !important;
-  border-radius: 0 !important;
-}
-
-/* hover */
-#mainNav .navbar-nav .nav-link:hover{
-  color: #68fff7 !important;
-}
-
-/* item “ativo” com retângulo  */
-#mainNav .navbar-nav .nav-link.active{
-  color: #ffffff !important;
-  background: rgba(1, 17, 54, 0.35) !important;   /* azul escuro com transparência */
-  border: 2px solid rgba(104, 255, 247, 0.25) !important;
-}
-
-/* evita o creative.js mudar para branco no shrink */
-#mainNav.navbar-shrink{
-  background: #004e74 !important;
-  border: none !important;
-}
-#mainNav.navbar-shrink .navbar-nav .nav-link{
-  color: #ffffff !important;
-}
-
-/* Logo BEST Porto em branco (a partir do PNG azul) */
-#mainNav .navbar-brand img{
-  filter: brightness(0) invert(1);
 }
 
 
