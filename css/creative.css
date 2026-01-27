@@ -734,8 +734,8 @@ header.masthead.slide1{
   overflow: hidden;
 
   margin-top: 0 !important;
-  min-height: 100vh !important;
-  height: 100vh !important;
+  /*min-height: 100vh !important; what the actual fuck is this*/
+  /*height: 100vh !important;*/
 
   background: #000b29 !important;
   background-image: none !important;
