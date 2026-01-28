@@ -607,9 +607,8 @@ header.slide1 {
   width: 100%;
   max-width: 640px !important;
   height: 320px !important;
-  display: block;      
-  margin-right: 100px !important; 
-  background: #004e74;
+  display: block;
+  margin-right: 100px !important;
   border-radius: 4px;
 }
 
