@@ -4,10 +4,40 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-creative/blob/master/LICENSE)
  */
 
+/* Tiago: BSE 26 VI fonts
+ * Headings: OpenSauce bold CAPS
+ * Sub-headings: OpenSauceOne bold standard case
+ * Body: Inter
+ *
+ * Notes:
+ * Open Sauce ONE (= version without ink traps): https://github.com/marcologous/Open-Sauce-Fonts
+ * Inter: https://fonts.google.com/specimen/Inter
+ */
+@font-face {
+    font-family: "OpenSauce";
+    src: url("../img/fonts/OpenSauceOne-Bold.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("../img/fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+    font-weight: normal bold;
+    font-style: normal;
+    font-display: block;
+}
+
 body,
 html {
   width: 100%;
   height: 100%;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "OpenSauce", system-ui, sans-serif;
 }
 
 hr {
@@ -31,46 +61,6 @@ a {
 
 a:hover {
   color: #1a67a8;
-}
-
-@font-face {
-  font-family: "Lato";
-  src: url("../img/2020/webfont/lato-v17-latin-regular.woff") format('woff');
-  font-weight: default;
-}
-
-
-@font-face {
-  font-family: 'quantumregular';
-  src: url('../webfontkit/quantum-webfont.woff2') format('woff2'),
-       url('../webfontkit/quantum-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-
-}
-
-
-h1 {
-  font-family: 'Prompt';
-  font-weight: bold;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6{
-  font-family: 'Fira Sans Condensed';
-  font-weight: bold;
-}
-
-p,
-li {
-  font-family: 'PT Sans';
-}
-
-.font-footer{
-  font-family: 'PT Sans'
 }
 
 .bg-green {
@@ -197,10 +187,6 @@ header.masthead h2 {
   font-size: 1.5rem;
 }
 
-header.masthead p {
-  font-weight: 300;
-}
-
 @media (min-width: 768px) {
   header.masthead p {
     font-size: 1.15rem;
@@ -268,12 +254,10 @@ header.masthead p {
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
   padding: 0 15px;
-  font-family: 'Open Sans', sans-serif;
 }
 
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
   font-size: 14px;
-  font-weight: 600;
   text-transform: uppercase;
 }
 
@@ -303,13 +287,11 @@ header.masthead p {
 }
 
 .btn {
-  font-weight: 700;
   text-transform: uppercase;
   border: 5px solid #000;
   background-color: #e2c044;
   color:#fff;
   border-radius: 0px;
-  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .btn-blue {
@@ -416,9 +398,7 @@ ul.safetyList {
 }
 
 .team-header .section-heading.text-green {
-    font-family: 'Open Sans', sans-serif;
     font-size: clamp(2rem, 5vw, 2.5rem);
-    font-weight: 700;
     color: #68fff7; /* O teu ciano/verde água */
     margin: 0;
     text-transform: none;
@@ -503,17 +483,13 @@ ul.safetyList {
 }
 
 .team-desc h4 {
-    font-family: 'Open Sans', sans-serif;
     font-size: 1.2rem;
-    font-weight: 700;
     margin: 0 0 5px;
     color: #fff;
 }
 
 .team-desc span {
-    font-family: 'Inter', sans-serif;
     font-size: 0.8rem;
-    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #68fff7; /* Cargo em ciano para destacar */
@@ -546,8 +522,6 @@ ul.safetyList {
 
 /* Título centrado com Open Sans */
 .location-title {
-    font-family: 'Open Sans', sans-serif !important;
-    font-weight: 700;
     font-size: 2.8rem;
     color: white;
     margin-bottom: 40px;
@@ -557,7 +531,6 @@ ul.safetyList {
 
 /* Corpo de texto centrado com Inter */
 .location-text p {
-    font-family: 'Inter', sans-serif !important;
     color: rgba(255, 255, 255, 0.95);
     font-size: 1.15rem;
     line-height: 1.8;
@@ -572,7 +545,6 @@ ul.safetyList {
 }
 
 .source-link {
-    font-family: 'Inter', sans-serif;
     font-size: 0.85rem;
     opacity: 0.6;
 }
@@ -664,8 +636,7 @@ header.masthead.slide1{
 /* texto */
 .slide1-title{
   color: #40e0d0;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 800;
+  font-weight: bold;
   font-size: clamp(4.4rem, 5.2vw, 6.2rem) !important;
   line-height: 1.03;
   margin-left: 100px;
@@ -673,7 +644,6 @@ header.masthead.slide1{
 
 .slide1-subtitle{
   color: #40e0d0;
-  font-family: 'Open Sans', sans-serif;
   font-size: clamp(1.6rem, 2.0vw, 2.6rem) !important;
   line-height: 1.25;
   margin-left: 100px;
@@ -681,8 +651,7 @@ header.masthead.slide1{
 
 .slide1-date{
   color: #d4ff00;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 700;
+  font-weight: bold;
   font-size: clamp(1.2rem, 1.6vw, 2.0rem) !important;
   margin-left: 100px;
 }
@@ -695,8 +664,7 @@ header.masthead.slide1{
   color: #011136 !important;
   border: none !important;
   border-radius: 999px !important;
-  font-family: 'Prompt', sans-serif;
-  font-weight: 800;
+  font-weight: bold;
   font-size: 1rem !important;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -717,8 +685,7 @@ header.masthead.slide1{
 }
 
 .slide1-video-label{
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 800;
+  font-weight: bold;
   font-size: 0.75rem;
   letter-spacing: 0.16em;
   color: #111;
@@ -762,8 +729,7 @@ header.masthead.slide1{
 
 #mainNav .navbar-nav .nav-link {
   color: #ffffff !important; /* Letras sempre brancas por padrão */
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 700 !important;
+  font-weight: bold !important;
   font-size: 0.95rem !important;
   letter-spacing: 0.02em;
   padding: 10px 18px !important;
@@ -781,7 +747,7 @@ header.masthead.slide1{
   color: #68fff7 !important; /* Ciano brilhante */
   background: transparent !important;
   border: none !important;
-  font-weight: 800 !important; /* Realce visual pelo peso da fonte */
+  font-weight: bold !important; /* Realce visual pelo peso da fonte */
   text-shadow: 0 0 8px rgba(104, 255, 247, 0.4); /* Brilho suave */
 }
 
@@ -856,16 +822,15 @@ header.masthead.slide1{
 .stat-item .num {
     display: inline-block; 
     font-size: 2rem;
-    font-weight: 800;
+    font-weight: bold;
     color: white;
     margin-right: 10px;
 }
 
 .stat-item .lab {
     display: inline-block;
-    font-family: 'Open Sans', sans-serif;
     font-size: 1rem; 
-    font-weight: 700;
+    font-weight: bold;
     color: white;
     text-transform: capitalize;
 }
@@ -883,7 +848,7 @@ header.masthead.slide1{
     padding: 0 20px;       /* Pequena margem para não colarem mesmo aos bordos do ecrã */
     
     color: #68fff7 !important; 
-    font-weight: 700;
+    font-weight: bold;
     font-size: 0.95rem;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -920,9 +885,8 @@ header.masthead.slide1{
 
 .best-porto-title {
   margin-left: 100px;
-  font-family: 'Open Sans', sans-serif;
   font-size: clamp(1.6rem, 2.0vw, 2.6rem) !important;
-  font-weight: 700;             /* negrito */
+  font-weight: bold;             /* negrito */
   text-transform: none;     
   color: #ffffff;
   margin-bottom: 22px;
@@ -931,7 +895,6 @@ header.masthead.slide1{
 
 .best-porto-text p {
   margin-left: 100px;
-  font-family: 'Inter', sans-serif;
   font-size: 16px;
   line-height: 1.7;
   color: #FFFFFF;
@@ -949,8 +912,7 @@ header.masthead.slide1{
   border-radius: 30px !important;
   border: none !important; 
   text-transform: none !important; /* Remove o uppercase do Bootstrap */
-  font-family: 'Open Sans', sans-serif !important;
-  font-weight: 800;
+  font-weight: bold;
   font-size: 14px;
   text-decoration: none;
   transition: all 0.25s ease;
@@ -1062,7 +1024,6 @@ header.masthead.slide1{
 body {
     background-color: #000b29;
     color: #ffffff;
-    font-family: 'Open sans', sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -1105,8 +1066,7 @@ body {
 
 .title-right {
     font-size: clamp(1.6rem, 2.0vw, 2.6rem) !important;
-    font-family: 'Open sans', sans-serif;
-    font-weight: 700;
+    font-weight: bold;
     padding-right: 5%;
     text-align: right;
 }
@@ -1119,7 +1079,6 @@ body {
 
 /* --- ALINHAMENTO DO TEXTO --- */
 .content-left {
-    font-family: 'Inter', sans-serif;
     max-width: 800px;
     margin-left: 5%; 
     text-align: left;
@@ -1134,7 +1093,6 @@ body {
 
 /* Novo estilo para centralizar o texto turquesa */
 .text-center {
-    font-family: 'Inter', sans-serif;
     width: 100%;
     text-align: center;
     margin: 40px 0;
@@ -1147,7 +1105,6 @@ body {
 }
 
 .cyan-text {
-    font-family: 'Inter', sans-serif;
     color: #68fff7; 
 }
 
@@ -1160,13 +1117,12 @@ body {
 }
 
 #symposium .btn-symposium {
-    font-family: 'Inter', sans-serif;
     background-color: #68fff7;
     color: #000b29;
     text-decoration: none;
     padding: 16px 50px;
     border-radius: 50px;
-    font-weight: 700;
+    font-weight: bold;
     transition: 0.3s;
     min-width: 220px;
     text-align: center;
@@ -1204,7 +1160,6 @@ body {
   text-align: center;
   color: #d4ff00; /* rosa */
   margin-bottom: 24px;
-  font-family: 'Open Sans', sans-serif;
   font-size: clamp(1.6rem, 2.0vw, 2.6rem) !important;
 }
 .faq-content {
@@ -1213,14 +1168,12 @@ body {
 }
 .faq-question {
   color: #68fff7; /* rosa for questions */
-  font-family: 'Inter', sans-serif;
   font-size: 17px; /* subtitle size */
   margin-top: 16px;
   margin-bottom: 8px;
 }
 .faq-answer {
   color: #ffffff; /* white for answers */
-  font-family: 'Inter', sans-serif;
   font-size: 16px;
 }
 
@@ -1233,7 +1186,6 @@ body {
   text-align: center;
   color: #ffffff; 
   margin-bottom: 24px;
-  font-family: 'Open Sans', sans-serif;
   font-size: clamp(1.6rem, 2.0vw, 2.6rem) !important;
 }
 
