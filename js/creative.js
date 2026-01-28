@@ -123,9 +123,9 @@ function fadeImg(el, val, fade){
 x = 0;
 var images = [];
 
-images[0] = "img/porto/porto1.jpg";
-images[1] = "img/porto/porto2.jpg";
-images[2] = "img/porto/porto3.jpg";
+images[0] = "media/porto/porto1.jpg";
+images[1] = "media/porto/porto2.jpg";
+images[2] = "media/porto/porto3.jpg";
 function CB() {
   
   try {
