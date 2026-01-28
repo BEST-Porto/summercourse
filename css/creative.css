@@ -520,7 +520,8 @@ ul.safetyList {
 
 .team-members {
     /* Calculamos a largura para que caibam exatamente 4 por linha (menos o gap) */
-    flex: 0 1 calc(25% - 20px); 
+    flex: 0 1 calc(25% - 20px);
+    background-color: #011136; 
     min-width: 250px;    /* Impede que fiquem pequenas demais */
     height: 300px;       /* Mantém a altura que definimos */
     position: relative;
