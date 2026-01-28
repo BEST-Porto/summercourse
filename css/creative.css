@@ -155,67 +155,6 @@ img::-moz-selection {
 	height: 7%;
 }
 
-@media (max-width: 500px){
-  header.masthead {
-    margin-top: 4rem;
-    padding-top: 10rem;
-    padding-bottom: calc(10rem - 56px);
-    background:url(../img/backgroundsc222.png);
-    background-position: center center;
-    background-size: cover;
-  }
-}
-
-header.masthead {
-  margin-top: 4rem;
-  padding-top: 10rem;
-  padding-bottom: calc(10rem - 56px);
-  background:url(../img/backgroundsc221.png);
-  background-position: center center;
-  background-size: cover;
-}
-
-header.masthead hr {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-header.masthead h1 {
-  font-size: 2rem;
-}
-header.masthead h2 {
-  font-size: 1.5rem;
-}
-
-@media (min-width: 768px) {
-  header.masthead p {
-    font-size: 1.15rem;
-  }
-}
-
-@media (min-width: 992px) {
-  header.masthead {
-    height: 100vh;
-    min-height: 650px;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-  header.masthead h1 {
-    font-size: 3rem;
-  }
-  header.masthead h2 {
-    font-size: 1.5rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  header.masthead h1 {
-    font-size: 4rem;
-  }
-  header.masthead h2 {
-    font-size: 2rem;
-  }
-}
 
 .service-box {
   max-width: 400px;
@@ -342,16 +281,6 @@ header.masthead h2 {
   padding: 10px 0;
   font-size: 11px;
   color: white;
-}
-.bg-image {
-  background-image: url("img/porto.jpg"); /* The image used */
-  background-color: #cccccc; /* Used if the image is unavailable */
-  height: auto; /* You must set a specified height */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-  transition: 3s;
-  margin: 0;
 }
 
 .map-container-2{
@@ -617,7 +546,7 @@ section#contact{
 
 
 /* ===== SLIDE 1  ===== */
-header.masthead.slide1{
+header.slide1 {
   position: relative;
   overflow: hidden;
 
