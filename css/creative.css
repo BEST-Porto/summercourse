@@ -31,13 +31,20 @@
 
 body,
 html {
-  width: 100%;
-  height: 100%;
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    width: 100%;
+    height: 100%;
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    text-align: justify; /* justify by default */
+    font-size: 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "OpenSauce", system-ui, sans-serif;
+}
+
+/* A ideia é ter o texto por defeito a 20px e o h2 a 30px*/
+h2 {
+    font-size: 30px;
 }
 
 hr {
@@ -97,16 +104,15 @@ a:hover {
 }
 
 section {
-  padding: 4rem 0;
-  /*max-width: 1700px; why tf is this here*/
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
 }
 
 .section-heading {
   margin-top: 0;
-}
-
-.best-section {
-  font-size: 300%;
 }
 
 ::-moz-selection {
@@ -148,77 +154,9 @@ img::-moz-selection {
 	border-color: #1a67a8;
 }
 
-/* Navbar styles moved to bottom of file to avoid conflicts */
-
 .spacing {
 	width: 100%;
 	height: 7%;
-}
-
-
-.service-box {
-  max-width: 400px;
-}
-
-.portfolio-box {
-  position: relative;
-  display: block;
-  max-width: 650px;
-  margin: 0 auto;
-}
-
-.portfolio-box .portfolio-box-caption {
-  position: absolute;
-  bottom: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  opacity: 0;
-  color: #fff;
-  background: rgba(240, 95, 64, 0.9);
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
-
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  text-align: center;
-}
-
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-  padding: 0 15px;
-}
-
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
-  font-size: 14px;
-  text-transform: uppercase;
-}
-
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-  font-size: 18px;
-}
-
-.portfolio-box:hover .portfolio-box-caption {
-  opacity: 1;
-}
-
-.portfolio-box:focus {
-  outline: none;
-}
-
-@media (min-width: 768px) {
-  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
-    font-size: 16px;
-  }
-  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-    font-size: 22px;
-  }
 }
 
 .text-primary {
@@ -269,7 +207,6 @@ img::-moz-selection {
 }
 .footer a {
   color: rgb(255, 255, 255);
-  font-size: 20px;
   padding: 10px;
   transition: all .3s ease;
 }
@@ -327,7 +264,6 @@ ul.safetyList {
 }
 
 .team-header .section-heading.text-green {
-    font-size: clamp(2rem, 5vw, 2.5rem);
     color: #68fff7; /* O teu ciano/verde água */
     margin: 0;
     text-transform: none;
@@ -413,7 +349,6 @@ ul.safetyList {
 }
 
 .team-desc h4 {
-    font-size: 1.2rem;
     margin: 0 0 5px;
     color: #fff;
 }
@@ -452,7 +387,6 @@ ul.safetyList {
 
 /* Título centrado com Open Sans */
 .location-title {
-    font-size: 2.8rem;
     color: white;
     margin-bottom: 40px;
     letter-spacing: 3px;
@@ -462,7 +396,6 @@ ul.safetyList {
 /* Corpo de texto centrado com Inter */
 .location-text p {
     color: rgba(255, 255, 255, 0.95);
-    font-size: 1.15rem;
     line-height: 1.8;
     margin-bottom: 25px;
     text-align: center; /* Aqui é onde o texto fica centrado */
@@ -475,7 +408,7 @@ ul.safetyList {
 }
 
 .source-link {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     opacity: 0.6;
 }
 
@@ -564,6 +497,7 @@ header.slide1 {
 }
 
 /* texto */
+/* Tiago 28jan: estes font-sizes aqui com o clamp sao mega cansados mas vou deixar por agora q n tenho tempo*/
 .slide1-title{
   color: #40e0d0;
   font-weight: bold;
@@ -595,7 +529,6 @@ header.slide1 {
   border: none !important;
   border-radius: 999px !important;
   font-weight: bold;
-  font-size: 1rem !important;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   padding: 22px 56px !important;
@@ -611,13 +544,6 @@ header.slide1 {
   display: block;
   margin-right: 100px !important;
   border-radius: 4px;
-}
-
-.slide1-video-label{
-  font-weight: bold;
-  font-size: 0.75rem;
-  letter-spacing: 0.16em;
-  color: #111;
 }
 
 .slide1-video iframe{
@@ -656,16 +582,45 @@ header.slide1 {
   gap: 26px; /* Espaçamento entre itens */
 }
 
+/* Tiago: mano isto fez me sangrar dos olhos*/
 #mainNav .navbar-nav .nav-link {
   color: #ffffff !important; /* Letras sempre brancas por padrão */
   font-weight: bold !important;
-  font-size: 0.95rem !important;
+  font-size: 0.95rem;
   letter-spacing: 0.02em;
   padding: 10px 18px !important;
   background: transparent !important;
   border: none !important;
   border-radius: 0 !important;
   transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+@media (max-width: 1350px) {
+    #mainNav .navbar-nav .nav-link {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 1250px) {
+    #mainNav .navbar-nav .nav-link {
+        font-size: 0.7rem;
+    }
+
+    #mainNav .navbar-nav {
+        align-items: center;
+        gap: 20px; /* Espaçamento entre itens */
+    }
+}
+
+@media (max-width: 1150px) {
+    #mainNav .navbar-nav .nav-link {
+        font-size: 0.6rem;
+    }
+
+    #mainNav .navbar-nav {
+        align-items: center;
+        gap: 10px;
+    }
 }
 
 /* ===== ESTADOS DE REALCE (HOVER E ACTIVE) ===== */
@@ -758,7 +713,6 @@ header.slide1 {
 
 .stat-item .lab {
     display: inline-block;
-    font-size: 1rem; 
     font-weight: bold;
     color: white;
     text-transform: capitalize;
@@ -778,7 +732,6 @@ header.slide1 {
     
     color: #68fff7 !important; 
     font-weight: bold;
-    font-size: 0.95rem;
     letter-spacing: 1.5px;
     text-transform: uppercase;
 }
@@ -797,101 +750,118 @@ header.slide1 {
    About BEST Porto Section Stylinng
 ===================================== */
 
-.best-porto-section {
-  padding: 80px 0;
-  width: 100%;
-}
-
 .best-porto-container {
-  max-width: 1300px;
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr; 
-  gap: 60px;
-  align-items: center;
+    width: 1200px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 50px;
+    column-gap: 4em;
+    align-items: center;
+
+    /* Text settings for these blocks */
+    /* Important to have this here for em spacing consistency on children */
+    font-size: 20px;
+    color: white;
 }
 
 /* ---------- Texto ---------- */
 
 .best-porto-title {
-  margin-left: 100px;
-  font-size: clamp(1.6rem, 2.0vw, 2.6rem) !important;
   font-weight: bold;             /* negrito */
-  text-transform: none;     
-  color: #ffffff;
+  text-transform: none;
   margin-bottom: 22px;
 }
 
+.best-porto-text {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    place-self: start center;
+}
 
 .best-porto-text p {
-  margin-left: 100px;
-  font-size: 16px;
-  line-height: 1.7;
-  color: #FFFFFF;
-  margin-bottom: 18px;
-  max-width: 520px;
+    margin-bottom: 1em;
 }
 
 .btn-custom-best {
-  display: inline-block;
-  margin-left: 100px !important; /* Força o alinhamento */
-  margin-top: 25px;
-  padding: 14px 36px !important;
-  background: #d4ff00 !important;
-  color: #000 !important;
-  border-radius: 30px !important;
-  border: none !important; 
-  text-transform: none !important; /* Remove o uppercase do Bootstrap */
-  font-weight: bold;
-  font-size: 14px;
-  text-decoration: none;
-  transition: all 0.25s ease;
+    /* Shape */
+    display: inline-flex;
+    height: 50px;
+    padding: 0 50px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 30px;
+
+    /* Color & text */
+    background: #d4ff00;
+    color: #000;
+    font-weight: bold;
 }
+
+.btn-custom-best:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+/* Placement for buttons inside grids */
+.best-porto-container .btn-custom-best {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    place-self: end end;
+}
+
 
 
 /* ---------- Imagens ---------- */
 .best-porto-images {
-  margin-right:20px;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
-.best-img {
-  width: 100%;
-  border-radius: 6px;
-  object-fit: cover;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.45);
-}
-.top-img {
-  height: 230px;
-}
-.bottom-img {
-  height: 260px;
+.best-porto-images img {
+    width: 500px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.45);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1250px) {
 
-  .best-porto-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
+    .best-porto-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        width: 90%;
+    }
 
-  .best-porto-images {
-    order: -1;
-  }
+    .best-porto-title {
+        text-align: center;
+    }
 
-  .best-porto-title {
-    text-align: center;
-  }
+    .best-porto-images {
+        margin-top: 1em;
+        width: 100%;
+    }
 
-  .best-porto-text {
-    text-align: center;
-  }
+    .best-porto-images img {
+        width: 100%;
+        height: 350px;
+    }
 
-  .best-porto-text p {
-    margin-left: auto;
-    margin-right: auto;
-  }
+    .best-porto-container .btn-custom-best {
+        place-self: center center;
+    }
+}
+
+@media (max-width: 800px) {
+    .best-porto-images img {
+        height: 250px;
+    }
 }
 
 /* About Course Section */
@@ -937,18 +907,6 @@ header.slide1 {
     align-items: center;
     justify-content: center;
 }
-
-#about_course p {
-    font-size: 16px;
-    line-height: 1.8;
-    margin-bottom: 30px;
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 
 body {
     background-color: #000b29;
@@ -1029,7 +987,6 @@ body {
 }
 
 .content-left p, .content-right p, .text-center p {
-    font-size: 1.1rem;
     margin-bottom: 20px;
 }
 
@@ -1089,7 +1046,6 @@ body {
   text-align: center;
   color: #d4ff00; /* rosa */
   margin-bottom: 24px;
-  font-size: clamp(1.6rem, 2.0vw, 2.6rem) !important;
 }
 .faq-content {
   color: #ffffff; /* white body text */
@@ -1097,7 +1053,7 @@ body {
 }
 .faq-question {
   color: #68fff7; /* rosa for questions */
-  font-size: 17px; /* subtitle size */
+  font-size: 18px; /* subtitle size */
   margin-top: 16px;
   margin-bottom: 8px;
 }
@@ -1115,7 +1071,6 @@ body {
   text-align: center;
   color: #ffffff; 
   margin-bottom: 24px;
-  font-size: clamp(1.6rem, 2.0vw, 2.6rem) !important;
 }
 
 /* ===== Footer Socials (Side by Side) ===== */
@@ -1143,7 +1098,6 @@ body {
 .follow-text {
   margin: 0 0 6px 0;            /* small margin below text */
   font-weight: bold;
-  font-size: 1.5rem;
 }
 
 .follow-line {
@@ -1155,7 +1109,6 @@ body {
 
 .social-icons a {
   color: white;
-  font-size: 22px;
   margin-right: 15px;
   text-decoration: none;
 }
@@ -1170,8 +1123,6 @@ body {
 
 .socials-right p {
   margin: 0 0 4px 0;            /* small spacing between address lines */
-  font-size: 1.2rem;
-  line-height: 1.2rem;
 }
 
 
@@ -1193,11 +1144,6 @@ body {
   
   font-size: 0.9rem;          /* Adjusts the size of the envelope icon inside */
   margin-top: 10px;
-}
-
-/* Styling for the contact names */
-.contact-name {
-  font-size: 1.1rem;
 }
 
 /* Overrides for links */
