@@ -835,6 +835,12 @@ nav .logo {
     place-self: end end;
 }
 
+.best-fitas {
+  display:flex;
+  flex-wrap:nowrap; 
+  
+}
+
 /* ---------- Imagens ---------- */
 .best-porto-images {
     grid-column: 2 / 3;
