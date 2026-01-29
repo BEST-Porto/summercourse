@@ -44,7 +44,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* A ideia é ter o texto por defeito a 20px e o h2 a 30px*/
 h2 {
-    font-size: 30px;
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
 }
 
 hr {
@@ -371,34 +375,18 @@ ul.safetyList {
 
 
 /* Location */
-.location-section {
+#location {
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Efeito parallax bonito */
+    padding: 4rem 0;
 }
 
 /* Aumentar o padding da caixa para o texto respirar */
 .transparent-box {
-    background-color: rgba(0, 11, 41, 0.85) !important;
-    padding: 60px 40px !important; /* Mais espaço em cima/baixo e lados */
-    max-width: 900px; /* Limita a largura para o texto centrado ficar elegante */
+    background-color: rgba(0, 11, 41, 0.85);
+    padding: 30px 40px;
     margin: 0 auto;
-}
-
-/* Título centrado com Open Sans */
-.location-title {
-    color: white;
-    margin-bottom: 40px;
-    letter-spacing: 3px;
-    text-transform: none !important;
-}
-
-/* Corpo de texto centrado com Inter */
-.location-text p {
-    color: rgba(255, 255, 255, 0.95);
-    line-height: 1.8;
-    margin-bottom: 25px;
-    text-align: center; /* Aqui é onde o texto fica centrado */
 }
 
 .source-wrapper {
@@ -514,7 +502,7 @@ header.slide1 {
 }
 
 .slide1-date{
-  color: #d4ff00;
+  color: #ddff00;
   font-weight: bold;
   font-size: clamp(1.2rem, 1.6vw, 2.0rem) !important;
   margin-left: 100px;
@@ -697,36 +685,69 @@ nav .logo {
     padding: 60px 0; /* Diminuí o padding vertical da secção */
 }
 
-.line-wrapper {
-    display: inline-block;
-    width: 60px !important; /* Tamanho pequeno do traço */
-    margin-right: 15px;      /* Espaço entre traço e texto */
-    vertical-align: middle;
-}
-
-.white-line {
-    background-color: white;
-    height: 3px; /* Um pouco mais fino para elegância */
-    width: 100%;
-}
-
-
 .header-row {
     text-align: center;      /* Isto centra o conjunto traço + texto */
     margin-bottom: 30px;
 }
 
-.title-right {
-    display: inline-block;
-    vertical-align: middle;
+/* linhas brancas titulos*/
+.line-title {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.line {
+    height: 4px;
+    width: 40vw;
+}
+
+.line-title > * {
+    padding: 0 2rem;
+}
+
+.line-text {
+    width: 40vw;
+    align-self: flex-start;
+    margin-left: 15vw;
+}
+
+.line-text p {
     margin: 0;
+    padding: 1rem 0;
+}
+
+.line-white {
+    background-color: #ffffff;
+}
+
+.line-yellow {
+    background-color: #ddff00;
+    width: 30vw;
+}
+
+@media (max-width: 1250px) {
+    .line-text {
+        width: 50vw;
+        align-self: flex-start;
+        margin-left: 10vw;
+    }
 }
 
 /* A FAIXA AZUL: Muito mais estreita */
 .stats-banner {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    max-width: none;
     background-color: #004e74;
-    padding: 15px 0 !important; /* Padding mínimo para ser estreita */
-    margin: 20px 0 !important;
+}
+
+.stats-banner .num {
+    font-size: 39px;
+    line-height: 40px;
 }
 
 .stat-item .num {
@@ -775,19 +796,42 @@ nav .logo {
 /* =====================================
    About BEST Porto Section Stylinng
 ===================================== */
+.best-flex-container-wide {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
 
-.best-porto-container {
+/* flex container */
+.best-flex-container {
+    width: 1200px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* grid container */
+.grid-container {
     width: 1200px;
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 50px;
+    grid-template-columns: 3fr 2fr;
     column-gap: 4em;
     align-items: center;
-
     /* Text settings for these blocks */
     /* Important to have this here for em spacing consistency on children */
     font-size: 20px;
     color: white;
+}
+
+.grid-one-row {
+    grid-template-rows: 1fr;
+}
+
+.grid-two-rows {
+    grid-template-rows: 1fr 50px;
 }
 
 /* ---------- Texto ---------- */
@@ -808,6 +852,12 @@ nav .logo {
     margin-bottom: 1em;
 }
 
+.best-grid-bottom-row {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    place-self: start center;
+}
+
 .btn-custom-best {
     /* Shape */
     display: inline-flex;
@@ -817,7 +867,7 @@ nav .logo {
     justify-content: center;
     text-decoration: none;
     border-radius: 30px;
-    background: #d4ff00;
+    background: #ddff00;
     color: #000;
     font-weight: bold;
 }
@@ -829,7 +879,7 @@ nav .logo {
 }
 
 /* Placement for buttons inside grids */
-.best-porto-container .btn-custom-best {
+.grid-container .btn-custom-best {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     place-self: end end;
@@ -851,7 +901,7 @@ nav .logo {
 }
 
 .best-porto-images img {
-    width: 500px;
+    max-width: 100%;
     height: 250px;
     object-fit: cover;
     border-radius: 6px;
@@ -860,7 +910,7 @@ nav .logo {
 
 @media (max-width: 1250px) {
 
-    .best-porto-container {
+    .grid-container {
         display: flex;
         flex-direction: column;
         justify-content: start;
@@ -882,7 +932,7 @@ nav .logo {
         height: 350px;
     }
 
-    .best-porto-container .btn-custom-best {
+    .grid-container .btn-custom-best {
         place-self: center center;
     }
 }
@@ -914,11 +964,6 @@ nav .logo {
     overflow: hidden;
 }
 
-#about_course .container {
-    max-width: 100%;
-    padding: 0 60px;
-}
-
 #about_course .col-lg-12 {
     text-align: left;
     padding-left: 0;
@@ -946,14 +991,7 @@ body {
 
 
 /* --- Symposium-about --- */
-.container {
-    padding: 80px 0;
-    max-width: 100%;
-}
 
-.symposium-section {
-    margin-bottom: 100px;
-}
 
 /* --- CABEÇALHOS COM LINHA ATÉ AO FIM --- */
 .header-row {
@@ -964,42 +1002,12 @@ body {
     overflow: hidden;
 }
 
-.line-wrapper {
-    flex-grow: 1;
-    position: relative;
-    height: 4px;
-}
-
-.line {
-    position: absolute;
-    right: 30px;
-    height: 100%;
-    width: 200vw; 
-}
-
-.white-line { background-color: #ffffff; }
-.yellow-line { background-color: #d4ff00; }
-
-.title-right {
-    font-size: clamp(1.6rem, 2.0vw, 2.6rem) !important;
-    font-weight: bold;
-    padding-right: 5%;
-    text-align: right;
-}
-
-.yellow-text {
-  color: #d4ff00;
-  font-size: clamp(1.6rem, 2.0vw, 2.6rem) !important;
+.text-yellow {
+  color: #ddff00;
  
 }
 
 /* --- ALINHAMENTO DO TEXTO --- */
-.content-left {
-    max-width: 800px;
-    margin-left: 5%; 
-    text-align: left;
-}
-
 .content-right {
     max-width: 750px;
     margin-left: auto; 
@@ -1007,20 +1015,8 @@ body {
     text-align: left;
 }
 
-/* Novo estilo para centralizar o texto turquesa */
-.text-center {
-    width: 100%;
-    text-align: center;
-    margin: 40px 0;
-    padding: 0 10%;
-}
-
-.content-left p, .content-right p, .text-center p {
-    margin-bottom: 20px;
-}
-
-.cyan-text {
-    color: #68fff7; 
+.text-cyan {
+    color: #68fff7;
 }
 
 /* --- BOTÕES CENTRALIZADOS --- */
@@ -1028,7 +1024,6 @@ body {
     display: flex;
     justify-content: center;
     gap: 40px;
-    margin-top: 20px;
 }
 
 #symposium .btn-symposium {
@@ -1051,50 +1046,8 @@ body {
 
 /* Mobile */
 @media (max-width: 700px) {
-    .title-right { font-size: 1.5rem; }
-    .yellow-text { font-size: 1.2rem; }
     .button-center { flex-direction: column; align-items: center; }
-    .text-center { padding: 0 5%; }
 }
-
-/* ================= FAQ Section Styles ================= */
-.bg-faq {
-  position: relative;
-  background: #000b29; /* azul escuro */
-  overflow: hidden;
-}
-.bg-faq:before,
-.bg-faq:after {
-  content: none; /* remove decorative patterns for plain background */
-}
-
-.faq-container {
-  max-width: 1100px;
-}
-.faq-title {
-  text-align: center;
-  color: #d4ff00; /* rosa */
-  margin-bottom: 24px;
-}
-.faq-content {
-  color: #ffffff; /* white body text */
-  text-align: center; /* center FAQ text */
-}
-
-.faq-question {
-  color: #68fff7; 
-  font-size: 25px; /* subtitle size */
-  margin-top: 16px;
-  margin-bottom: 8px;
-}
-.faq-answer {
-  color: #ffffff; /* white for answers */
-}
-
-@media (max-width: 768px) {
-  .faq-container { padding: 0 8px; }
-}
-
 
 .PreviousCourses {
   text-align: center;
