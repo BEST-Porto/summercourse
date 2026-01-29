@@ -564,22 +564,35 @@ header.slide1 {
 }
 
 /* ===== NAVBAR GERAL ===== */
+
+nav .brain {
+    height: 100px;
+}
+
+nav .logo {
+    width: auto;
+    padding: 12px 10px;
+    filter: brightness(0) invert(1); /* Torna o logo PNG totalmente branco */
+}
+
 #mainNav {
-  background: #004e74 !important;
-  border: none !important;
-  padding: 14px 0 !important;
-  transition: all 0.3s ease;
+    background: #004e74 !important;
+    border: none !important;
+    padding: 5px 0 !important;
+    transition: all 0.3s ease;
 }
 
 #mainNav .container-fluid {
-  padding-left: 18px !important;
-  padding-right: 18px !important;
+    padding: 0 18px;
 }
 
 /* Links da Navbar */
 #mainNav .navbar-nav {
-  align-items: center;
-  gap: 26px; /* Espaçamento entre itens */
+    align-items: center;
+    gap: 26px; /* Espaçamento entre itens */
+    /* é mt mau isto estar hardcoded, como se vê pela quantidade de @medias que fiz em baixo
+     * todo: deve dar para fazer só com flexbox e justify-content: space-*
+     */
 }
 
 /* Tiago: mano isto fez me sangrar dos olhos*/
@@ -595,13 +608,18 @@ header.slide1 {
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-@media (max-width: 1350px) {
+/* MEDIA queries para manter a navbar sem fazer wrap no texto */
+@media (max-width: 1550px) {
     #mainNav .navbar-nav .nav-link {
         font-size: 0.8rem;
     }
+
+    nav .brain {
+        height: 90px;
+    }
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1400px) {
     #mainNav .navbar-nav .nav-link {
         font-size: 0.7rem;
     }
@@ -610,16 +628,35 @@ header.slide1 {
         align-items: center;
         gap: 20px; /* Espaçamento entre itens */
     }
+
+    nav .brain {
+        height: 80px;
+    }
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1220px) {
     #mainNav .navbar-nav .nav-link {
         font-size: 0.6rem;
     }
 
     #mainNav .navbar-nav {
         align-items: center;
-        gap: 10px;
+        gap: 0;
+    }
+
+    nav .brain {
+        height: 70px;
+    }
+}
+
+/* this is the navbar collapse breakpoint */
+@media (max-width: 991px) {
+    nav .brain {
+        display: none;
+    }
+
+    nav .logo {
+        display: inline;
     }
 }
 
@@ -654,17 +691,6 @@ header.slide1 {
 #mainNav.navbar-shrink .navbar-nav .nav-link:hover {
   color: #68fff7 !important;
 }
-
-/* Logo e Marca */
-#mainNav.navbar-shrink .navbar-brand {
-  color: #ffffff !important;
-}
-
-#mainNav .navbar-brand img {
-  filter: brightness(0) invert(1); /* Torna o logo PNG totalmente branco */
-}
-
-
 
 .stats-bg-dark {
     background-color: #000b29 !important;
