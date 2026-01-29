@@ -817,8 +817,6 @@ nav .logo {
     justify-content: center;
     text-decoration: none;
     border-radius: 30px;
-
-    /* Color & text */
     background: #d4ff00;
     color: #000;
     font-weight: bold;
@@ -827,6 +825,7 @@ nav .logo {
 .btn-custom-best:hover {
     text-decoration: none;
     color: #000;
+    transform: scale(1.05);
 }
 
 /* Placement for buttons inside grids */
@@ -835,8 +834,6 @@ nav .logo {
     grid-row: 2 / 3;
     place-self: end end;
 }
-
-
 
 /* ---------- Imagens ---------- */
 .best-porto-images {
@@ -1077,15 +1074,15 @@ body {
   color: #ffffff; /* white body text */
   text-align: center; /* center FAQ text */
 }
+
 .faq-question {
-  color: #68fff7; /* rosa for questions */
-  font-size: 18px; /* subtitle size */
+  color: #68fff7; 
+  font-size: 25px; /* subtitle size */
   margin-top: 16px;
   margin-bottom: 8px;
 }
 .faq-answer {
   color: #ffffff; /* white for answers */
-  font-size: 16px;
 }
 
 @media (max-width: 768px) {
