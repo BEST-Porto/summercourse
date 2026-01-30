@@ -385,8 +385,9 @@ ul.safetyList {
 /* Aumentar o padding da caixa para o texto respirar */
 .transparent-box {
     background-color: rgba(0, 11, 41, 0.85);
-    padding: 30px 40px;
     margin: 0 auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .source-wrapper {
@@ -481,7 +482,7 @@ header.slide1 {
 
   /* espaço para a navbar */
   padding-top: 110px !important;
-  padding-bottom: 0 !important;
+  padding-bottom: 4rem;
 }
 
 /* texto */
@@ -680,11 +681,6 @@ nav .logo {
   color: #68fff7 !important;
 }
 
-.stats-bg-dark {
-    background-color: #000b29 !important;
-    padding: 60px 0; /* Diminuí o padding vertical da secção */
-}
-
 .header-row {
     text-align: center;      /* Isto centra o conjunto traço + texto */
     margin-bottom: 30px;
@@ -796,21 +792,33 @@ nav .logo {
 /* =====================================
    About BEST Porto Section Stylinng
 ===================================== */
-.container-flex-wide {
-    width: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+.container {
+    max-width: 1200px;
 }
 
-/* grid container */
+.container-wide {
+    width: 100vw;
+    max-width: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Tiago 30jan: eu confesso q também javardei aqui
+ * Isto devia dar para fazer tudo com recurso ao bootstrap
+ * em vez de ter esta custom grid que eu criei + o comboio de breakpoints para ela em baixo...
+ * #tech debt
+ */
 .container-grid {
     width: 1200px;
     display: grid;
     grid-template-columns: 3fr 2fr;
     column-gap: 4em;
     align-items: center;
+
+    /* this is to match the bootstrap container so text aligns everywhere */
+    padding-right: 15px;
+    padding-left: 15px;
+
     /* Text settings for these blocks */
     /* Important to have this here for em spacing consistency on children */
     font-size: 20px;
@@ -874,16 +882,6 @@ nav .logo {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     place-self: end end;
-}
-
-.best-fitas {
-  display: flex;
-  flex-wrap: nowrap;
-  width: 100%;
-}
-
-.best-fitas img {
-    max-width: 100%;
 }
 
 /* ---------- Imagens ---------- */
