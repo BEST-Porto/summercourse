@@ -31,11 +31,12 @@
 
 body,
 html {
-    width: 100%;
-    height: 100%;
     font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     text-align: justify; /* justify by default */
     font-size: 20px;
+    background-color: #000b29;
+    color: #ffffff;
+    line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -451,56 +452,28 @@ height: 10px;
 }
 
 section#contact{
-  width: 100vw;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
 
 /* ===== SLIDE 1  ===== */
-header.slide1 {
-  position: relative;
-  overflow: hidden;
-
-  margin-top: 0 !important;
-  /*min-height: 100vh !important; what the actual fuck is this*/
-  /*height: 100vh !important;*/
-
-  background: #000b29 !important;
-  background-image: none !important;
-
+.slide1 {
   /* espaço para a navbar */
   padding-top: 110px !important;
   padding-bottom: 4rem;
 }
 
+.slide1 h1 {
+    font-size: clamp(4rem, 5vw, 6rem);
+}
+
 /* texto */
 /* Tiago 28jan: estes font-sizes aqui com o clamp sao mega cansados mas vou deixar por agora q n tenho tempo*/
-.slide1-title{
-  color: #40e0d0;
-  font-weight: bold;
-  font-size: clamp(4.4rem, 5.2vw, 6.2rem);
-  line-height: 1.03;
-  margin-left: 100px;
-}
-
-.slide1-subtitle{
-  color: #40e0d0;
-  font-size: clamp(1.6rem, 2.0vw, 2.6rem) !important;
-  line-height: 1.25;
-  margin-left: 100px;
-}
-
-.slide1-date{
-  color: #ddff00;
-  font-weight: bold;
-  font-size: clamp(1.2rem, 1.6vw, 2.0rem) !important;
-  margin-left: 100px;
-}
 
 /* botão */
 .slide1-btn{
-  margin-left:100px;
   display: inline-block;
   background: #68fff7 !important;
   color: #011136 !important;
@@ -514,37 +487,25 @@ header.slide1 {
 }
 
 /* caixa do trailer */
-.slide1-video {
-  position: relative;
-  width: 100%;
-  max-width: 640px !important;
-  height: 320px !important;
-  display: block;
-  margin-right: 100px !important;
-  border-radius: 4px;
+#trailer {
+    width: 100%;
+    max-width: 640px !important;
+    height: 320px !important;
+    border: 0;
 }
-
-.slide1-video iframe{
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
 
 /* responsivo */
 @media (max-width: 992px){
-  .slide1-title{ font-size: 2.2rem; }
-  .slide1-subtitle{ font-size: 1.4rem; }
-  .slide1-date{ font-size: 1.4rem; }
-  .slide1-video{ max-width: 100%; height: 220px; margin: 2rem auto 0; }
+    .btn-wrap { padding: 2rem 0; }
+    .slide1-title{ font-size: 2.2rem; }
+    .slide1-subtitle{ font-size: 1.4rem; }
+    .slide1-date{ font-size: 1.4rem; }
 }
 
 /* ===== NAVBAR GERAL ===== */
 
 nav .brain {
-    height: 100px;
+    height: 80px;
 }
 
 nav .logo {
@@ -558,10 +519,6 @@ nav .logo {
     border: none !important;
     padding: 5px 0 !important;
     transition: all 0.3s ease;
-}
-
-#mainNav .container-fluid {
-    padding: 0 18px;
 }
 
 /* Links da Navbar */
@@ -723,10 +680,6 @@ nav .logo {
 
 /* A FAIXA AZUL: Muito mais estreita */
 .stats-banner {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    max-width: none;
     background-color: #004e74;
 }
 
@@ -785,13 +738,6 @@ nav .logo {
     max-width: 1200px;
 }
 
-.container-wide {
-    width: 100vw;
-    max-width: none;
-    padding: 0;
-    margin: 0;
-}
-
 /* Tiago 30jan: eu confesso q também javardei aqui
  * Isto devia dar para fazer tudo com recurso ao bootstrap
  * em vez de ter esta custom grid que eu criei + o comboio de breakpoints para ela em baixo...
@@ -799,6 +745,7 @@ nav .logo {
  */
 .container-grid {
     width: 1200px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 3fr 2fr;
     column-gap: 4em;
@@ -963,14 +910,6 @@ nav .logo {
     align-items: center;
     justify-content: center;
 }
-
-body {
-    background-color: #000b29;
-    color: #ffffff;
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
 
 /* --- Symposium-about --- */
 
