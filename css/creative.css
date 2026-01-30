@@ -1109,12 +1109,7 @@ body {
   border-radius: 50%;         /* Turns the square into a perfect circle */
   
   background-color: #ff007f;  /* Pink color */
-  
-  /* The icon color matches the section background (#000b29) */
-  color: #000b29; 
-  
-  font-size: 0.9rem;          /* Adjusts the size of the envelope icon inside */
-  margin-top: 10px;
+  font-size: 0.9rem;
 }
 
 /* Overrides for links */
