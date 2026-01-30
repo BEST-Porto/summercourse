@@ -461,12 +461,21 @@ section#contact{
 /* ===== SLIDE 1  ===== */
 .slide1 {
   /* espaço para a navbar */
-  padding-top: 110px !important;
+  padding-top: 150px !important;
   padding-bottom: 4rem;
 }
 
 .slide1 h1 {
-    font-size: clamp(4rem, 5vw, 6rem);
+    font-size: 2.5rem;
+}
+
+@media (max-width: 490px) {
+    .slide1 h1 {
+        font-size: 2rem;
+    }
+    .slide1 h2 {
+        font-size: 1rem;
+    }
 }
 
 /* texto */
