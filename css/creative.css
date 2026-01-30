@@ -50,7 +50,7 @@ html {
 body,
 html {
     font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    text-align: justify; /* justify by default */
+    text-align: left; /* justify by default */
     font-size: 20px;
     background-color: #000b29;
     color: #ffffff;
