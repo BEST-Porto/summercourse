@@ -55,6 +55,10 @@ const images = [
 
 cycleBackgroundImages(["bg1","bg2"], images);
 
+// This makes the navbar close after clicking
+$('.navbar-nav a').on('click', function () {
+    $('.navbar-collapse').collapse('hide');
+});
 
 
 //caroussel

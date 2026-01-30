@@ -444,6 +444,11 @@ nav .logo {
     nav .logo {
         display: inline;
     }
+
+    /* now we can increase font slightly again since links are vertically distributed */
+    #mainNav .navbar-nav .nav-link {
+         font-size: 0.8rem;
+     }
 }
 
 /* ===== ESTADOS DE REALCE (HOVER E ACTIVE) ===== */
