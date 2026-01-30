@@ -796,7 +796,7 @@ nav .logo {
 /* =====================================
    About BEST Porto Section Stylinng
 ===================================== */
-.best-flex-container-wide {
+.container-flex-wide {
     width: 100%;
     display: flex;
     flex-flow: column nowrap;
@@ -804,17 +804,8 @@ nav .logo {
     align-items: center;
 }
 
-/* flex container */
-.best-flex-container {
-    width: 1200px;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-}
-
 /* grid container */
-.grid-container {
+.container-grid {
     width: 1200px;
     display: grid;
     grid-template-columns: 3fr 2fr;
@@ -879,7 +870,7 @@ nav .logo {
 }
 
 /* Placement for buttons inside grids */
-.grid-container .btn-custom-best {
+.container-grid .btn-custom-best {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     place-self: end end;
@@ -914,7 +905,7 @@ nav .logo {
 
 @media (max-width: 1250px) {
 
-    .grid-container {
+    .container-grid {
         display: flex;
         flex-direction: column;
         justify-content: start;
@@ -936,7 +927,7 @@ nav .logo {
         height: 350px;
     }
 
-    .grid-container .btn-custom-best {
+    .container-grid .btn-custom-best {
         place-self: center center;
     }
 }
