@@ -886,9 +886,13 @@ nav .logo {
 }
 
 .best-fitas {
-  display:flex;
-  flex-wrap:nowrap; 
-  
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.best-fitas img {
+    max-width: 100%;
 }
 
 /* ---------- Imagens ---------- */
@@ -1047,12 +1051,6 @@ body {
 /* Mobile */
 @media (max-width: 700px) {
     .button-center { flex-direction: column; align-items: center; }
-}
-
-.PreviousCourses {
-  text-align: center;
-  color: #ffffff; 
-  margin-bottom: 24px;
 }
 
 /* ===== Footer Socials (Side by Side) ===== */
