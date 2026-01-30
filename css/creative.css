@@ -70,62 +70,6 @@ h3 {
     font-size: 1.25rem;
 }
 
-hr {
-  max-width: 50px;
-  border-width: 3px;
-  border-color: #212529;
-}
-
-hr.light {
-  border-color: #fff;
-}
-hr.blue {
-  border-color: #fff;
-}
-
-a {
-  color: #1a67a8 ;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
-
-a:hover {
-  color: #1a67a8;
-}
-
-.bg-green {
-  background-color: #0e770a !important;
-}
-.bg-dark {
-  background-color: #212529 !important;
-}
-.bg-persianblueVIsc21 {
-  background-color: #072AC8 !important;
-}
-.bg-viridiangreenVIsc21 {
-  background-color: #129490 !important;
-}
-.bg-vblackVIsc22 {
-  background-color: #000 !important;
-}
-.bg-blueVIsc22 {
-  background-color: #000b29;
-}
-
-.bg-darkyellowVIsc22 {
-  background-color: #e2c044;
-}
-
-.text-faded {
-  color: rgba(255, 255, 255, 0.7);
-}
-.text-green {
-  color: #3669b2;
-}
-.text-lizard {
-  color: #F8D525;
-}
-
 section {
     padding-bottom: 4rem;
     display: flex;
@@ -140,94 +84,18 @@ section {
     scroll-margin-top: var(--navbar-height);
 }
 
-.section-heading {
-  margin-top: 0;
-}
-
-::-moz-selection {
-  color: #fff;
-  background: #212529;
-  text-shadow: none;
-}
-
+/* selected text color when user drags mouse */
 ::selection {
   color: #fff;
   background: #212529;
   text-shadow: none;
 }
 
-img::-moz-selection {
-  color: #fff;
-  background: transparent;
-}
-
+/* don't select over images */
 img::selection {
   color: #fff;
   background: transparent;
 }
-
-img::-moz-selection {
-  color: #fff;
-  background: transparent;
-}
-
-.img-borders {
-	border: none;
-	border-radius: 0px;
-	background-color: transparent;
-}
-
-.multilingual {
-	border-style: none solid;
-	border-width: 2px;
-	border-color: #1a67a8;
-}
-
-.spacing {
-	width: 100%;
-	height: 7%;
-}
-
-.text-primary {
-  color: #f0a120  !important;
-}
-
-.btn {
-  text-transform: uppercase;
-  border: 5px solid #000;
-  background-color: #e2c044;
-  color:#fff;
-  border-radius: 0px;
-}
-
-.btn-blue {
-  background-color: #3669b2;
-}
-
-.btn-xl {
-  padding: 1rem 2rem;
-}
-
-.btn:hover, .btn:focus, .btn:active, .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  color:#fff;
-  background-color: #A0CCDA !important;	
-  border-color: #3669b2;
-}
-
-.btn-primary {
-  color: #fff;;
-  background-color: #3669b2;
-  line-height: 0.5rem;
-  margin-top: 1rem;
-  border-radius: 0px;
-  border: 5px solid #000;
-}
-
-.btn-primary:active, .btn-primary:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(240, 95, 64, 0.5) !important;
-  box-shadow: 0 0 0 0.2rem rgba(240, 95, 64, 0.5) !important;
-}
-
 
 /*footer*/
 .footer {
@@ -249,28 +117,6 @@ img::-moz-selection {
   color: white;
 }
 
-.map-container-2{
-  overflow:hidden;
-  padding-bottom:56.25%;
-  position:relative;
-  height:0;
-  }
-  .map-container-2 iframe{
-  left:0;
-  top:0;
-  height:70%;
-  width:100%;
-  position:absolute;
-  }
-/*========== Segurança ===========*/
-ul.safetyList {
-	text-align: left;
-}
-.boxSafety {
-	border: 3px solid #000;
-	padding: 50px;
-}
-
 /*=============== team ===============*/
 /* ===== SEÇÃO CORE TEAM (SEM BOOTSTRAP) ===== */
 
@@ -279,12 +125,6 @@ ul.safetyList {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-}
-
-.team-header .section-heading.text-green {
-    color: #68fff7; /* O teu ciano/verde água */
-    margin: 0;
-    text-transform: none;
 }
 
 /* A GRELHA (GRID) - O substituto do Row/Col */
@@ -477,21 +317,6 @@ height: 10px;
   transform: translateX(0);
   
 }
-.aspect-ratio {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 56%; /* The height of the item will now be 56% of the width. */
-}
-
-/* Adjust the iframe so it's rendered in the outer-width and outer-height of it's parent */
-.aspect-ratio iframe {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-}
 
 section#contact{
   width: 100%;
@@ -518,23 +343,6 @@ section#contact{
     .slide1 h2 {
         font-size: 1rem;
     }
-}
-
-/* texto */
-/* Tiago 28jan: estes font-sizes aqui com o clamp sao mega cansados mas vou deixar por agora q n tenho tempo*/
-
-/* botão */
-.slide1-btn{
-  display: inline-block;
-  background: #68fff7 !important;
-  color: #011136 !important;
-  border: none !important;
-  border-radius: 999px !important;
-  font-weight: bold;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  padding: 22px 56px !important;
-  text-decoration: none;
 }
 
 /* caixa do trailer */
@@ -731,21 +539,6 @@ nav .logo {
     line-height: 40px;
 }
 
-.stat-item .num {
-    display: inline-block; 
-    font-size: 2rem;
-    font-weight: bold;
-    color: white;
-    margin-right: 10px;
-}
-
-.stat-item .lab {
-    display: inline-block;
-    font-weight: bold;
-    color: white;
-    text-transform: capitalize;
-}
-
 .values-footer {
     display: flex;
     /* justify-content: space-between faz com que o primeiro item cole à esquerda, 
@@ -915,48 +708,6 @@ nav .logo {
     }
 }
 
-/* About Course Section */
-.course-images {
-  margin-right:20px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.course-images img {
-    width: 500px;
-    height: 300px;
-    border-radius: 10px;
-    object-fit: cover;
-}
-
-/* About Course Section Styling */
-#about_course {
-    position: relative;
-    overflow: hidden;
-}
-
-#about_course .col-lg-12 {
-    text-align: left;
-    padding-left: 0;
-}
-
-#about_course .col-lg-6 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 30px;
-}
-
-#about_course .col-lg-6:last-child {
-    position: relative;
-    align-items: center;
-    justify-content: center;
-}
-
-/* --- Symposium-about --- */
-
-
 /* --- CABEÇALHOS COM LINHA ATÉ AO FIM --- */
 .header-row {
     display: flex;
@@ -971,14 +722,6 @@ nav .logo {
  
 }
 
-/* --- ALINHAMENTO DO TEXTO --- */
-.content-right {
-    max-width: 750px;
-    margin-left: auto; 
-    margin-right: 5%;
-    text-align: left;
-}
-
 .text-cyan {
     color: #68fff7;
 }
@@ -990,7 +733,7 @@ nav .logo {
     gap: 40px;
 }
 
-#symposium .btn-symposium {
+.btn-symposium {
     background-color: #68fff7;
     color: #000b29;
     text-decoration: none;
@@ -1002,9 +745,11 @@ nav .logo {
     text-align: center;
 }
 
-#symposium .btn-symposium:hover {
+.btn-symposium:hover {
     transform: scale(1.05);
     box-shadow: 0 0 20px rgba(64, 224, 208, 0.4);
+    text-decoration: none;
+    color: #000b29;
 }
 
 
