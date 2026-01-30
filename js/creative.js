@@ -1,32 +1,46 @@
-x = 0;
-var images = [];
+"use strict";
 
-images[0] = "media/porto/porto1.jpg";
-images[1] = "media/porto/porto2.jpg";
-images[2] = "media/porto/porto3.jpg";
-function CB() {
-  
-  try {
-   
-    images.forEach(function(img){
-      new Image().src = img; 
-      // caches images, avoiding white flash between background replacements
+/**
+ * Background slideshow
+ *
+ * @param {string} elem_id  - apply bg to this element
+ * @param {string[]} images - array of image URLs
+ * @param {number} interval - change timer (ms)
+ */
+function cycleBackgroundImages(elem_id, images, interval) {
+    if (!images || !images.length) return;
+
+    let x = 0;
+    const elem = document.getElementById(elem_id);
+
+    // Preload images
+    const preloaded = images.map(src => {
+        const img = new Image();
+        img.src = src;
+        return img;
     });
-  
 
-      setInterval(function(){
-        document.getElementById('location').style="background-image:url(" + images[x] + ");";
-        x++;
-        if(x >= images.length){
-          x = 0;
-        }  
-      }, 5000)
-  } catch(err) {
-      alert(err.message);
-  }
+    function updateBackground() {
+        elem.style.backgroundImage = `url(${images[x]})`;
+        x = (x + 1) % images.length;
+    }
+
+    try {
+        updateBackground(); // show first image immediately
+        setInterval(updateBackground, interval);
+
+    } catch (err) {
+        console.error("Error updating background:", err);
+    }
 }
 
-CB();
+const images = [
+    "media/porto/porto1.jpg",
+    "media/porto/porto2.jpg",
+    "media/porto/porto3.jpg"
+];
+
+cycleBackgroundImages("location", images, 5000);
 
 
 
