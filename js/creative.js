@@ -3,15 +3,19 @@
 /**
  * Background slideshow
  *
- * @param {string} elem_id  - apply bg to this element
- * @param {string[]} images - array of image URLs
- * @param {number} interval - change timer (ms)
+ * Tiago 30jan26: added fade for smoother transitions.
+ * Check 99c7658d for simpler version without fade.
+ *
+ * @param {string[]} elemIds - 2 elements to hold the swapping images
+ * @param {string[]} images  - array of image URLs
+ * @param {number} interval  - change timer (ms)
+ * @param {number} fade      - fade duration (ms)
  */
-function cycleBackgroundImages(elem_id, images, interval) {
+function cycleBackgroundImages(elemIds, images, interval = 5000, fade = 1000) {
     if (!images || !images.length) return;
 
-    let x = 0;
-    const elem = document.getElementById(elem_id);
+    let current = 0;
+    let [bg1, bg2] = elemIds.map(id => document.getElementById(id));
 
     // Preload images
     const preloaded = images.map(src => {
@@ -20,18 +24,27 @@ function cycleBackgroundImages(elem_id, images, interval) {
         return img;
     });
 
+    // update fade duration in CSS
+    bg1.style.transitionDuration = `${fade}ms`;
+    bg2.style.transitionDuration = `${fade}ms`;
+
+    // start with first image
+    bg1.style.backgroundImage = `url(${images[0]})`;
+    bg1.style.opacity = "1";
+
     function updateBackground() {
-        elem.style.backgroundImage = `url(${images[x]})`;
-        x = (x + 1) % images.length;
+        const nextImage = images[(current + 1) % images.length];
+
+        bg2.style.backgroundImage = `url(${nextImage})`;
+        bg2.style.opacity = "1"; // fade in new img
+        bg1.style.opacity = "0"; // fade out old img
+
+        // swap references
+        [bg1, bg2] = [bg2, bg1];
+        current = (current + 1) % images.length;
     }
 
-    try {
-        updateBackground(); // show first image immediately
-        setInterval(updateBackground, interval);
-
-    } catch (err) {
-        console.error("Error updating background:", err);
-    }
+    setInterval(updateBackground, interval);
 }
 
 const images = [
@@ -40,7 +53,7 @@ const images = [
     "media/porto/porto3.jpg"
 ];
 
-cycleBackgroundImages("location", images, 5000);
+cycleBackgroundImages(["bg1","bg2"], images);
 
 
 
