@@ -11,7 +11,6 @@
     <!-- font for icons (socials, email, etc) -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet"> <!-- todo: idk what this is, check usage-->
     <link rel="shortcut icon" href="media/favicon.png"/>
 
     <!-- Our CSS, update v param to force refresh cache -->
@@ -44,18 +43,12 @@
 
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto text-uppercase">
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#home">Home</a></li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#about_best_porto">About us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#about_course">BEST Symposium on Education</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#location">Location</a>
-                </li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#faq">FAQs</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about_best_porto">About us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about_bse">BEST Symposium on Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="#location">Location</a></li>
+                <li class="nav-item"><a class="nav-link" href="#faq">FAQs</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact us</a></li>
             </ul>
         </div>
     </div>
@@ -95,7 +88,7 @@
 </header>
 
 <!-- About BEST -->
-<section id="about-best-stats">
+<section id="about_best">
     <div class="container-fluid">
         <div class="line-title">
             <div class="line line-white"></div>
@@ -177,7 +170,7 @@
 
 
 
-<section id="about_course">
+<section id="about_bse">
 
   <div class="container-grid grid-two-rows">
     <div class="best-porto-text">
@@ -258,7 +251,7 @@
 </section>
 
 <!-- Location -->
-<section id="location" style="background-image:url(media/porto/porto2.jpg);">
+<section id="location" class="nav-scroll-min" style="background-image:url(media/porto/porto2.jpg);">
     <div class="container transparent-box">
         <h2 class="text-center">Location</h2>
         <div>
@@ -284,7 +277,7 @@
 </section>
 
 <!-- Frequently Asked Questions -->
-<section id="faq" class="pt-4">
+<section id="faq" class="pt-4 nav-scroll-min">
     <div class="container text-center">
         <h2 class="text-yellow mb-3">Frequently Asked Questions</h2>
         <div>
@@ -377,7 +370,7 @@
 </section>
 
 <!--Core Team-->
-<section id="core_team">
+<section id="team">
     <div class="team-container text-center">
         <h2 class="text-cyan mb-3">Core Team</h2>
 
@@ -540,11 +533,6 @@
 <!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.js"></script>
-
-<!-- Plugin JavaScript -->
-<script src="vendor/jquery-easing/jquery.easing.js"></script>
-<script src="vendor/scrollreveal/scrollreveal.js"></script>
-<script src="vendor/magnific-popup/jquery.magnific-popup.js"></script>
 
 <!-- Custom scripts for this template -->
 <script src="js/creative.js"></script>
