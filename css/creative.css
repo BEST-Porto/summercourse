@@ -249,22 +249,11 @@ ul.safetyList {
 /*=============== team ===============*/
 /* ===== SEÇÃO CORE TEAM (SEM BOOTSTRAP) ===== */
 
-.team-section {
-    padding: 80px 0;
-    background-color: #000b29; /* Cor de fundo escura consistente */
-}
-
 /* Contentor que limita a largura e centra na página */
 .team-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-}
-
-/* Cabeçalho da Secção */
-.team-header {
-    text-align: center;
-    margin-bottom: 60px;
 }
 
 .team-header .section-heading.text-green {
