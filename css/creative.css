@@ -508,11 +508,6 @@ nav .logo {
   color: #68fff7 !important;
 }
 
-.header-row {
-    text-align: center;      /* Isto centra o conjunto traço + texto */
-    margin-bottom: 30px;
-}
-
 /* linhas brancas titulos*/
 .line-title {
     width: 100%;
@@ -826,15 +821,6 @@ footer div {
     .best-porto-images img {
         height: 250px;
     }
-}
-
-/* --- CABEÇALHOS COM LINHA ATÉ AO FIM --- */
-.header-row {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 40px;
-    overflow: hidden;
 }
 
 .text-yellow {
