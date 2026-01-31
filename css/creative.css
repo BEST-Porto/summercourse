@@ -293,34 +293,55 @@ img::selection {
   transform: scale(1.05); 
 }
 
-/*carousel*/
-.carousel-inner .carousel-item.active,
-.carousel-inner .carousel-item-next,
-.carousel-inner .carousel-item-prev {
-  display: flex;
-  max-height: 20vw;
-  min-height: 18vh;
-
-}
-.carousel-inner .carousel-item.img{
-height: 10px;
+/* carousel */
+.swiper {
+    width: 100%;
 }
 
-.carousel-inner .carousel-item-right.active,
-.carousel-inner .carousel-item-next {
-  transform: translateX(33%);
+.swiper-slide {
+    height: 300px;              /* pick your height */
 }
 
-.carousel-inner .carousel-item-left.active, 
-.carousel-inner .carousel-item-prev {
-  transform: translateX(-33%);
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
 }
-  
-.carousel-inner .carousel-item-right,
-.carousel-inner .carousel-item-left{ 
-  transform: translateX(0);
-  
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #000b29;
+    width: 44px;
+    height: 44px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
 }
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    transform: scale(1.1);
+    opacity: 0.85;
+}
+
+.swiper-pagination-bullet {
+    background-color: #000b29;
+    opacity: 0.35;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    transform: scale(1.25);
+}
+
+/* Hide navigation arrows on mobile */
+@media (max-width: 767px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+}
+
 
 section#contact{
   width: 100%;

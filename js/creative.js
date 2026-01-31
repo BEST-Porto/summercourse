@@ -60,25 +60,28 @@ $('.navbar-nav a').on('click', function () {
     $('.navbar-collapse').collapse('hide');
 });
 
-
-//caroussel
-$('#recipeCarousel').carousel({
-  interval: 2000
-})
-
-$('.carousel .carousel-item').each(function(){
-    var next = $(this).next();
-    if (!next.length) {
-    next = $(this).siblings(':first');
-    }
-    next.children(':first-child').clone().appendTo($(this));
-    
-    for (var i=0;i<3;i++) {
-        next=next.next();
-        if (!next.length) {
-        	next = $(this).siblings(':first');
-      	}
-        
-        next.children(':first-child').clone().appendTo($(this));
-      }
+// carousel config
+const swiper = new Swiper('.swiper', {
+    loop: true,
+    spaceBetween: 20,
+    slidesPerView: 1, // default (mobile)
+    breakpoints: {
+        576: {
+            slidesPerView: 2,
+        },
+        992: {
+            slidesPerView: 3,
+        }
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+        delay: 5000,                 // 3 seconds
+        disableOnInteraction: false // keep moving after user clicks
+    },
+    pagination: {
+        el: '.swiper-pagination',
+    },
 });
