@@ -1,0 +1,12 @@
+services:
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "${PORT:-80}:80"
+    volumes:
+      - .:/usr/share/nginx/html:ro,Z
+
+  # docker compose up -d launches on default port 80
+  # for custom ports specify via environment variable, e.g.:
+  # windows: $env:PORT=8004; docker compose up -d
+  # bash: PORT=8004 docker compose up -d
