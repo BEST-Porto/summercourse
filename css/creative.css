@@ -277,20 +277,56 @@ img::selection {
     opacity: 0.6;
 }
 
+/* =====================================
+   Parceiros / Sponsors
+===================================== */
+.sponsors-grid {
+    row-gap: 20px;
+}
 
-/*Parceiros*/
-.logo-box{
-	background-color: #fff;
-	border-radius: 100%;
-}
-.logo-box, .logo {
-	width: 100%;
-}
 .spacing-logos {
-	margin-bottom: 2vh;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2vh;
 }
-.logo:hover {
-  transform: scale(1.05); 
+
+.logo-box {
+    background-color: #004e74;
+    border-radius: 50%; /* Mantém o design circular */
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px; /* Espaçamento interno para o logo não colar às bordas */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-box img.logo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Garante que os logos mantêm as proporções nativas */
+    transition: transform 0.3s ease;
+}
+
+/* Efeito de interatividade com a cor de destaque da navbar */
+.logo-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(104, 255, 247, 0.3); /* Brilho text-cyan */
+}
+
+.logo-box:hover img.logo {
+    transform: scale(1.08); /* Pequeno zoom no logo em si */
+}
+
+/* Responsividade extra para ecrãs menores */
+@media (max-width: 768px) {
+    .logo-box {
+        width: 120px;
+        height: 120px;
+        padding: 15px;
+    }
 }
 
 /* carousel */
