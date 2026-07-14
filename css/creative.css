@@ -278,7 +278,7 @@ img::selection {
 }
 
 /* =====================================
-   Parceiros / Sponsors
+   Parceiros / Sponsors (Cross-Browser Fix)
 ===================================== */
 .sponsors-grid {
     row-gap: 20px;
@@ -291,33 +291,41 @@ img::selection {
 }
 
 .logo-box {
-    background-color: #004e74;
-    border-radius: 50%; /* Mantém o design circular */
+    background-color: #fff;
+    border-radius: 50%; 
     width: 150px;
     height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 25px; /* Espaçamento interno para o logo não colar às bordas */
+    /* Removemos o padding daqui para o Chrome não se baralhar */
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .logo-box img.logo {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain; /* Garante que os logos mantêm as proporções nativas */
+    /* Em vez de 100%, definimos o limite exato. 
+       150px da caixa - 50px de "padding" visual = 100px */
+    width: 100px;
+    height: 100px;
+    object-fit: contain; /* Mantém a proporção intocável */
+    object-position: center;
     transition: transform 0.3s ease;
 }
 
-/* Efeito de interatividade com a cor de destaque da navbar */
+/* Efeito de interatividade */
 .logo-box:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(104, 255, 247, 0.3); /* Brilho text-cyan */
+    box-shadow: 0 8px 20px rgba(104, 255, 247, 0.3); 
 }
 
 .logo-box:hover img.logo {
-    transform: scale(1.08); /* Pequeno zoom no logo em si */
+    transform: scale(1.08); 
+}
+
+/* Escurece logos que são totalmente brancos (Opção 1 de há bocado) */
+.logo-darken {
+    filter: brightness(0); 
 }
 
 /* Responsividade extra para ecrãs menores */
@@ -325,7 +333,11 @@ img::selection {
     .logo-box {
         width: 120px;
         height: 120px;
-        padding: 15px;
+    }
+    
+    .logo-box img.logo {
+        width: 80px; /* Reduzimos proporcionalmente */
+        height: 80px;
     }
 }
 
